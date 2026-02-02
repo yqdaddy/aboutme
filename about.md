@@ -4,261 +4,346 @@ title: 关于我
 subtitle: 技术负责人 / 技术总监
 ---
 
-<div class="resume">
-
-## 15 年+ 互联网技术负责人
-**ToB SaaS · 智能硬件 · AI 大模型工程化落地**
-
----
-
-## 基本信息
-
-<div class="info-grid">
-
-| 项目 | 信息 |
-|------|------|
-| **学历** | 本科 · 计算机科学与技术 |
-| **工作年限** | 15 年+ |
-| **岗位定位** | 技术负责人 / 技术总监 / CTO |
-| **行业方向** | ToB SaaS / 智能硬件 / 电商平台 / AI 应用 |
-
-</div>
-
----
-
-## 个人简介
-
-15 年+ 互联网行业技术负责人，长期深耕 **ToB SaaS、平台型系统、智能硬件与 AI 工程化应用**，具备从 **0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营** 的完整闭环经验。
-
-曾主导多个 **核心业务系统与平台级产品** 的技术架构与团队建设，包括 **SaaS 商城平台、供应链平台、智能售货系统、广告分发系统** 等，系统稳定支撑 **300 万+ 年服务用户规模**。
-
-具备 **强技术 + 强落地 + 强管理** 的复合能力：
-
-- 能下沉一线解决复杂系统与架构问题
-- 能自上而下规划技术路线与演进策略
-- 能带领 **10+ 人技术团队** 稳定交付，支撑业务持续增长
-
-近年来重点推动 **AI 大模型能力在 ToB 业务中的工程化落地**，将 LLM、知识库、自动化能力深度结合业务场景，用 AI 真正解决 **效率、成本与规模问题**，而非停留在概念或 Demo 阶段。
-
----
-
-## 核心能力矩阵
-
-### 一、系统架构与平台能力
-
-<div class="skill-list">
-
-- ToB SaaS 平台整体架构设计与长期演进
-- 高并发 / 高可用 / 高性能分布式系统设计
-- 微服务架构（Spring Cloud / Spring Boot）
-- 多端系统架构（管理后台 / 小程序 / App / H5）
-- 智能硬件平台（设备接入、状态同步、指令调度）
-- 搜索与数据分析系统（Elasticsearch / 数据建模）
-
-</div>
-
----
-
-### 二、AI 大模型应用与工程化能力
-
-#### AI 大模型应用开发（LLM App Development）
-
-- 基于通用大模型构建企业级 AI 应用
-- Prompt 工程 + 业务规则深度结合
-- 多模型策略与调用封装
-
-#### RAG（检索增强生成）落地实践
-
-- 构建企业级 AI 知识库
-- 向量化存储、相似度检索、结果重排
-- 用于业务问答、运营辅助、智能决策
-
-#### AI 在 ToB 场景的真实应用
-
-- 商品 / 内容 / 数据的智能分类与结构化
-- 运营分析自动化、业务决策辅助
-- 降低人工成本，提高运营效率
-
-#### AI 工程化治理
-
-- AI 服务稳定性与可用性设计
-- 权限控制、调用限流与成本控制
-- AI 能力模块化、服务化接入现有系统
-
----
-
-### 三、团队管理与业务协同能力
-
-- 10+ 人技术团队搭建与管理经验
-- 技术梯队建设与关键岗位培养
-- 研发流程规范化（需求 → 设计 → 交付）
-- 技术与产品 / 运营 / 业务负责人深度协同
-- 从 0 到 1 项目推进及可复制能力建设
-
----
-
-## 工作经历
-
-### 深圳市万鲸科技有限公司
-**技术总监** · 2019.10 – 至今
-
-<div class="job-detail">
-
-**业务方向**：ToB 电商平台 / 在线教育 / AI 智能化系统
-**技术架构**：Spring Cloud + Docker 微服务体系，UniApp 多端方案
-
-#### 核心职责
-
-- 负责公司整体技术架构规划与技术路线演进
-- 主导核心系统架构设计、技术选型与落地
-- 管理并培养技术研发团队（10+ 人）
-- 建立研发流程与交付规范，保障系统稳定运行
-- 推动 AI 能力在业务系统中的规模化落地
-
-#### AI 重点成果
-
-**AI 知识库 + 大模型应用落地**
-- 基于企业自有数据构建 AI 知识库
-- 将 **数十万级商品数据** 通过 AI 进行智能分类与结构化
-- 大幅降低人工运营与维护成本
-
-**AI 业务赋能**
-- AI 辅助运营分析与决策支持
-- 提升数据利用效率，缩短业务响应周期
-- 将 AI 能力模块化，作为平台基础能力复用
-
-</div>
-
----
-
-### 深圳市腾兴无限科技有限公司
-**项目技术经理** · 2016.05 – 2019.10
-
-<div class="job-detail">
-
-- 主导广告分发平台整体技术方案设计
-- 负责系统架构、需求拆解与研发组织
-- 构建高并发、高稳定性的服务端系统
-- 提出并落地核心数据同步与处理方案
-- 支撑平台在 **200+ QPS** 场景下稳定运行
-
-</div>
-
----
-
-### 深圳市锐讯无限科技有限公司
-**软件工程师** · 2012.12 – 2016.05
-
-<div class="job-detail">
-
-- 服务端系统设计、开发与部署
-- 客户端与服务端协议设计
-- 系统安全性与稳定性优化
-
-</div>
-
----
-
-### 深圳市彩秀科技有限公司
-**软件工程师** · 2010.03 – 2012.12
-
-<div class="job-detail">
-
-- Android 客户端与服务端 API 开发
-- 广告平台与数据处理系统建设
-- MySQL 数据库设计与维护
-
-</div>
-
----
-
-## 核心项目经验
-
-### 智能货柜售卖系统（0 → 1）
-**角色：技术负责人 / 架构负责人**
-
-<div class="project-detail">
-
-- 构建完整智能售卖系统闭环（下单 / 开门 / 识别 / 结算 / 补货）
-- 设备状态同步、指令调度与异常处理
-- 系统可复制、可扩展，支持规模化铺设
-
-</div>
-
----
-
-### 鲸旦电商平台（S2B2C）
-**角色：技术总负责人**
-
-<div class="project-detail">
-
-- 微服务架构设计与落地
-- 支撑百万级用户规模
-- 自动化部署与多端统一开发
-
-</div>
-
----
-
-## 教育背景
-
-| 学历 | 学校 | 专业 |
-|------|------|------|
-| **本科** | 华南师范大学 | 计算机科学与技术 |
-| **大专** | 深圳职业技术学院 | 计算机技术应用 |
-
----
-
-## 技能清单
-
-<div class="skills-section">
-
-### 核心能力
-<div class="skill-tags primary">
-<span>系统架构设计</span>
-<span>技术决策</span>
-<span>ToB SaaS 平台建设</span>
-<span>AI 大模型应用开发</span>
-<span>LLM</span>
-<span>RAG</span>
-</div>
-
-### 后端技术
-<div class="skill-tags backend">
-<span>Java</span>
-<span>Spring Boot</span>
-<span>Spring Cloud</span>
-<span>MySQL</span>
-<span>Redis</span>
-<span>Elasticsearch</span>
-<span>RabbitMQ</span>
-<span>Docker</span>
-</div>
-
-### 前端与多端
-<div class="skill-tags frontend">
-<span>Vue</span>
-<span>UniApp</span>
-<span>小程序</span>
-</div>
-
-### AI & 数据
-<div class="skill-tags ai">
-<span>AI 知识库构建</span>
-<span>向量检索</span>
-<span>语义搜索</span>
-<span>AI 服务工程化</span>
-</div>
-
-### 工程与管理
-<div class="skill-tags devops">
-<span>Jenkins</span>
-<span>Git</span>
-<span>CI/CD</span>
-<span>技术团队管理</span>
-<span>流程建设</span>
-</div>
-
-</div>
+<div class="resume-page">
+
+<!-- Hero 个人介绍 -->
+<section class="resume-hero">
+  <div class="resume-hero-content">
+    <h1 class="resume-name">技术负责人 / 技术总监</h1>
+    <p class="resume-tagline">15 年+ 互联网技术负责人 · ToB SaaS · 智能硬件 · AI 大模型工程化落地</p>
+    <div class="resume-highlights">
+      <div class="highlight-item">
+        <span class="highlight-number">15+</span>
+        <span class="highlight-label">年技术经验</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-number">300万+</span>
+        <span class="highlight-label">年服务用户</span>
+      </div>
+      <div class="highlight-item">
+        <span class="highlight-number">10+</span>
+        <span class="highlight-label">人团队管理</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 基本信息卡片 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">📋</span>
+    基本信息
+  </h2>
+  <div class="info-cards">
+    <div class="info-card">
+      <span class="info-label">学历</span>
+      <span class="info-value">本科 · 计算机科学与技术</span>
+    </div>
+    <div class="info-card">
+      <span class="info-label">工作年限</span>
+      <span class="info-value">15 年+</span>
+    </div>
+    <div class="info-card">
+      <span class="info-label">岗位定位</span>
+      <span class="info-value">技术负责人 / 技术总监 / CTO</span>
+    </div>
+    <div class="info-card">
+      <span class="info-label">行业方向</span>
+      <span class="info-value">ToB SaaS / 智能硬件 / 电商平台 / AI 应用</span>
+    </div>
+  </div>
+</section>
+
+<!-- 个人简介 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">👤</span>
+    个人简介
+  </h2>
+  <div class="profile-card">
+    <p>15 年+ 互联网行业技术负责人，长期深耕 <strong>ToB SaaS、平台型系统、智能硬件与 AI 工程化应用</strong>，具备从 <strong>0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营</strong> 的完整闭环经验。</p>
+    <p>曾主导多个核心业务系统与平台级产品的技术架构与团队建设，包括 SaaS 商城平台、供应链平台、智能售货系统、广告分发系统等。</p>
+    <div class="profile-strengths">
+      <div class="strength-item">
+        <span class="strength-icon">🔧</span>
+        <span>能下沉一线解决复杂系统与架构问题</span>
+      </div>
+      <div class="strength-item">
+        <span class="strength-icon">📈</span>
+        <span>能自上而下规划技术路线与演进策略</span>
+      </div>
+      <div class="strength-item">
+        <span class="strength-icon">👥</span>
+        <span>能带领技术团队稳定交付，支撑业务持续增长</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 核心能力 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">💡</span>
+    核心能力
+  </h2>
+  <div class="ability-grid">
+    <!-- 系统架构 -->
+    <div class="ability-card">
+      <div class="ability-header">
+        <span class="ability-icon">🏗️</span>
+        <h3>系统架构与平台能力</h3>
+      </div>
+      <ul class="ability-list">
+        <li>ToB SaaS 平台整体架构设计与长期演进</li>
+        <li>高并发 / 高可用 / 高性能分布式系统</li>
+        <li>微服务架构（Spring Cloud / Spring Boot）</li>
+        <li>多端系统架构（后台 / 小程序 / App / H5）</li>
+        <li>智能硬件平台（设备接入、状态同步）</li>
+      </ul>
+    </div>
+    <!-- AI 能力 -->
+    <div class="ability-card">
+      <div class="ability-header">
+        <span class="ability-icon">🤖</span>
+        <h3>AI 大模型应用与工程化</h3>
+      </div>
+      <ul class="ability-list">
+        <li>基于大模型构建企业级 AI 应用</li>
+        <li>RAG 检索增强生成落地实践</li>
+        <li>企业级 AI 知识库构建</li>
+        <li>AI 服务稳定性与成本控制</li>
+        <li>AI 能力模块化、服务化接入</li>
+      </ul>
+    </div>
+    <!-- 团队管理 -->
+    <div class="ability-card">
+      <div class="ability-header">
+        <span class="ability-icon">👥</span>
+        <h3>团队管理与业务协同</h3>
+      </div>
+      <ul class="ability-list">
+        <li>10+ 人技术团队搭建与管理</li>
+        <li>技术梯队建设与关键岗位培养</li>
+        <li>研发流程规范化（需求→设计→交付）</li>
+        <li>技术与产品/运营深度协同</li>
+        <li>从 0 到 1 项目推进能力</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 工作经历 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">💼</span>
+    工作经历
+  </h2>
+  <div class="timeline">
+    <!-- 万鲸科技 -->
+    <div class="timeline-item">
+      <div class="timeline-marker current"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3 class="company-name">深圳市万鲸科技有限公司</h3>
+          <span class="job-title">技术总监</span>
+          <span class="job-period">2019.10 – 至今</span>
+        </div>
+        <div class="job-tags">
+          <span>ToB 电商平台</span>
+          <span>在线教育</span>
+          <span>AI 智能化系统</span>
+        </div>
+        <div class="job-description">
+          <p><strong>技术架构：</strong>Spring Cloud + Docker 微服务体系，UniApp 多端方案</p>
+          <h4>核心职责</h4>
+          <ul>
+            <li>负责公司整体技术架构规划与技术路线演进</li>
+            <li>主导核心系统架构设计、技术选型与落地</li>
+            <li>管理并培养技术研发团队（10+ 人）</li>
+            <li>推动 AI 能力在业务系统中的规模化落地</li>
+          </ul>
+          <h4>AI 重点成果</h4>
+          <ul>
+            <li>基于企业自有数据构建 AI 知识库</li>
+            <li>将数十万级商品数据通过 AI 进行智能分类与结构化</li>
+            <li>AI 辅助运营分析与决策支持，大幅降低人工成本</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 腾兴无限 -->
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3 class="company-name">深圳市腾兴无限科技有限公司</h3>
+          <span class="job-title">项目技术经理</span>
+          <span class="job-period">2016.05 – 2019.10</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>主导广告分发平台整体技术方案设计</li>
+            <li>构建高并发、高稳定性的服务端系统</li>
+            <li>支撑平台在 <strong>200+ QPS</strong> 场景下稳定运行</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 锐讯无限 -->
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3 class="company-name">深圳市锐讯无限科技有限公司</h3>
+          <span class="job-title">软件工程师</span>
+          <span class="job-period">2012.12 – 2016.05</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>服务端系统设计、开发与部署</li>
+            <li>客户端与服务端协议设计</li>
+            <li>系统安全性与稳定性优化</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 彩秀科技 -->
+    <div class="timeline-item">
+      <div class="timeline-marker"></div>
+      <div class="timeline-content">
+        <div class="timeline-header">
+          <h3 class="company-name">深圳市彩秀科技有限公司</h3>
+          <span class="job-title">软件工程师</span>
+          <span class="job-period">2010.03 – 2012.12</span>
+        </div>
+        <div class="job-description">
+          <ul>
+            <li>Android 客户端与服务端 API 开发</li>
+            <li>广告平台与数据处理系统建设</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 核心项目 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">🚀</span>
+    核心项目
+  </h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <div class="project-header">
+        <h3>智能货柜售卖系统</h3>
+        <span class="project-badge">0 → 1</span>
+      </div>
+      <p class="project-role">技术负责人 / 架构负责人</p>
+      <ul class="project-details">
+        <li>构建完整智能售卖系统闭环（下单/开门/识别/结算/补货）</li>
+        <li>设备状态同步、指令调度与异常处理</li>
+        <li>系统可复制、可扩展，支持规模化铺设</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <div class="project-header">
+        <h3>鲸旦电商平台</h3>
+        <span class="project-badge">S2B2C</span>
+      </div>
+      <p class="project-role">技术总负责人</p>
+      <ul class="project-details">
+        <li>微服务架构设计与落地</li>
+        <li>支撑百万级用户规模</li>
+        <li>自动化部署与多端统一开发</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 教育背景 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">🎓</span>
+    教育背景
+  </h2>
+  <div class="education-list">
+    <div class="education-item">
+      <div class="edu-degree">本科</div>
+      <div class="edu-info">
+        <span class="edu-school">华南师范大学</span>
+        <span class="edu-major">计算机科学与技术</span>
+      </div>
+    </div>
+    <div class="education-item">
+      <div class="edu-degree">大专</div>
+      <div class="edu-info">
+        <span class="edu-school">深圳职业技术学院</span>
+        <span class="edu-major">计算机技术应用</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 技能清单 -->
+<section class="resume-section">
+  <h2 class="section-heading">
+    <span class="heading-icon">🛠️</span>
+    技能清单
+  </h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3 class="skill-category-title">核心能力</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag primary">系统架构设计</span>
+        <span class="skill-tag primary">技术决策</span>
+        <span class="skill-tag primary">ToB SaaS</span>
+        <span class="skill-tag primary">AI 大模型应用</span>
+        <span class="skill-tag primary">LLM</span>
+        <span class="skill-tag primary">RAG</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3 class="skill-category-title">后端技术</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag backend">Java</span>
+        <span class="skill-tag backend">Spring Boot</span>
+        <span class="skill-tag backend">Spring Cloud</span>
+        <span class="skill-tag backend">MySQL</span>
+        <span class="skill-tag backend">Redis</span>
+        <span class="skill-tag backend">Elasticsearch</span>
+        <span class="skill-tag backend">RabbitMQ</span>
+        <span class="skill-tag backend">Docker</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3 class="skill-category-title">前端与多端</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag frontend">Vue</span>
+        <span class="skill-tag frontend">UniApp</span>
+        <span class="skill-tag frontend">小程序</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3 class="skill-category-title">AI & 数据</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag ai">AI 知识库</span>
+        <span class="skill-tag ai">向量检索</span>
+        <span class="skill-tag ai">语义搜索</span>
+        <span class="skill-tag ai">AI 服务工程化</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3 class="skill-category-title">工程与管理</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag devops">Jenkins</span>
+        <span class="skill-tag devops">Git</span>
+        <span class="skill-tag devops">CI/CD</span>
+        <span class="skill-tag devops">团队管理</span>
+        <span class="skill-tag devops">流程建设</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 </div>
