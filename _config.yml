@@ -1,0 +1,68 @@
+# 码孖AI 博客配置
+# GitHub Pages + Jekyll
+
+title: 码孖AI
+description: >-
+  15年+互联网技术负责人的技术博客 | ToB SaaS · 智能硬件 · AI大模型工程化落地
+baseurl: "" # 如果部署到 username.github.io/repo-name，则设置为 "/repo-name"
+url: "" # 你的GitHub Pages URL，例如 "https://username.github.io"
+
+# 作者信息
+author:
+  name: 码孖AI
+  email: ""
+  bio: "技术负责人 / 技术总监 | ToB SaaS · 智能硬件 · AI大模型"
+
+# 社交链接
+social:
+  github: ""
+  # twitter: ""
+  # linkedin: ""
+
+# 主题设置
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 构建设置
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# 导航菜单
+header_pages:
+  - index.md
+  - about.md
+  - archive.md
+
+# 分页设置
+paginate: 10
+paginate_path: "/page/:num/"
+
+# 时区
+timezone: Asia/Shanghai
+
+# 默认设置
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "码孖AI"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# 排除文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
