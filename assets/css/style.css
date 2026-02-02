@@ -676,8 +676,15 @@ body {
 }
 
 .resume-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 800;
+  margin-bottom: var(--spacing-xs);
+}
+
+.resume-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  opacity: 0.95;
   margin-bottom: var(--spacing-sm);
 }
 

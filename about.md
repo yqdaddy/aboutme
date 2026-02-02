@@ -9,7 +9,8 @@ subtitle: 技术负责人 / 技术总监
 <!-- Hero 个人介绍 -->
 <section class="resume-hero">
   <div class="resume-hero-content">
-    <h1 class="resume-name">技术负责人 / 技术总监</h1>
+    <h1 class="resume-name">梁卓勋</h1>
+    <p class="resume-title">技术负责人 / 技术总监</p>
     <p class="resume-tagline">15 年+ 互联网技术负责人 · ToB SaaS · 智能硬件 · AI 大模型工程化落地</p>
     <div class="resume-highlights">
       <div class="highlight-item">
@@ -35,6 +36,10 @@ subtitle: 技术负责人 / 技术总监
     基本信息
   </h2>
   <div class="info-cards">
+    <div class="info-card">
+      <span class="info-label">姓名</span>
+      <span class="info-value">梁卓勋</span>
+    </div>
     <div class="info-card">
       <span class="info-label">学历</span>
       <span class="info-value">本科 · 计算机科学与技术</span>
