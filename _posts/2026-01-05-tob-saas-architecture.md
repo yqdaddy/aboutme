@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ToB SaaS 平台架构演进：从单体到微服务的实战经验"
-date: 2024-02-01 09:00:00 +0800
+date: 2026-01-05 09:00:00 +0800
 categories: [架构, SaaS]
 tags: [微服务, Spring Cloud, 架构演进, ToB]
 author: 码孖AI
