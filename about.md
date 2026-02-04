@@ -9,9 +9,8 @@ subtitle: 技术负责人 / 技术总监
 <!-- Hero 个人介绍 -->
 <section class="resume-hero">
   <div class="resume-hero-content">
-    <h1 class="resume-name">梁卓勋</h1>
     <p class="resume-title">技术负责人 / 技术总监</p>
-    <p class="resume-tagline">15 年+ 互联网技术负责人 · ToB SaaS · 智能硬件 · AI 大模型工程化落地</p>
+    <p class="resume-tagline">15 年+ 互联网技术负责人 · ToB SaaS · 智能货柜 · AI 大模型工程化落地</p>
     <div class="resume-highlights">
       <div class="highlight-item">
         <span class="highlight-number">15+</span>
@@ -37,10 +36,6 @@ subtitle: 技术负责人 / 技术总监
   </h2>
   <div class="info-cards">
     <div class="info-card">
-      <span class="info-label">姓名</span>
-      <span class="info-value">梁卓勋</span>
-    </div>
-    <div class="info-card">
       <span class="info-label">学历</span>
       <span class="info-value">本科 · 计算机科学与技术</span>
     </div>
@@ -54,7 +49,7 @@ subtitle: 技术负责人 / 技术总监
     </div>
     <div class="info-card">
       <span class="info-label">行业方向</span>
-      <span class="info-value">ToB SaaS / 智能硬件 / 电商平台 / AI 应用</span>
+      <span class="info-value">ToB SaaS / 智能货柜 / 电商平台 / AI 应用</span>
     </div>
   </div>
 </section>
@@ -66,7 +61,7 @@ subtitle: 技术负责人 / 技术总监
     个人简介
   </h2>
   <div class="profile-card">
-    <p>15 年+ 互联网行业技术负责人，长期深耕 <strong>ToB SaaS、平台型系统、智能硬件与 AI 工程化应用</strong>，具备从 <strong>0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营</strong> 的完整闭环经验。</p>
+    <p>15 年+ 互联网行业技术负责人，长期深耕 <strong>ToB SaaS、平台型系统、智能货柜与 AI 工程化应用</strong>，具备从 <strong>0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营</strong> 的完整闭环经验。</p>
     <p>曾主导多个核心业务系统与平台级产品的技术架构与团队建设，包括 SaaS 商城平台、供应链平台、智能售货系统、广告分发系统等。</p>
     <div class="profile-strengths">
       <div class="strength-item">
@@ -103,7 +98,7 @@ subtitle: 技术负责人 / 技术总监
         <li>高并发 / 高可用 / 高性能分布式系统</li>
         <li>微服务架构（Spring Cloud / Spring Boot）</li>
         <li>多端系统架构（后台 / 小程序 / App / H5）</li>
-        <li>智能硬件平台（设备接入、状态同步）</li>
+        <li>智能货柜平台（设备接入、状态同步）</li>
       </ul>
     </div>
     <!-- AI 能力 -->
@@ -241,6 +236,18 @@ subtitle: 技术负责人 / 技术总监
   <div class="project-grid">
     <div class="project-card">
       <div class="project-header">
+        <h3>水贝珠宝产业平台</h3>
+        <span class="project-badge">ToB + ToC</span>
+      </div>
+      <p class="project-role">技术负责人 / 架构负责人</p>
+      <ul class="project-details">
+        <li>面向深圳水贝 IBC 珠宝产业带，构建产业级服务平台</li>
+        <li>集成实时金价、内容种草、互动玩法、线下商家连接</li>
+        <li>打通线上流量与线下珠宝商户，提升产业数字化与用户转化效率</li>
+      </ul>
+    </div>
+    <div class="project-card">
+      <div class="project-header">
         <h3>智能货柜售卖系统</h3>
         <span class="project-badge">0 → 1</span>
       </div>
@@ -336,6 +343,17 @@ subtitle: 技术负责人 / 技术总监
         <span class="skill-tag ai">向量检索</span>
         <span class="skill-tag ai">语义搜索</span>
         <span class="skill-tag ai">AI 服务工程化</span>
+      </div>
+    </div>
+    <div class="skill-category">
+      <h3 class="skill-category-title">AI 研发提效</h3>
+      <div class="skill-tags-row">
+        <span class="skill-tag ai">Claude Code</span>
+        <span class="skill-tag ai">Cursor</span>
+        <span class="skill-tag ai">Trae</span>
+        <span class="skill-tag ai">CodeBuddy</span>
+        <span class="skill-tag ai">AI 辅助编程</span>
+        <span class="skill-tag ai">智能代码生成</span>
       </div>
     </div>
     <div class="skill-category">
