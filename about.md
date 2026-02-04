@@ -287,13 +287,6 @@ subtitle: 技术负责人 / 技术总监
         <span class="edu-major">计算机科学与技术</span>
       </div>
     </div>
-    <div class="education-item">
-      <div class="edu-degree">大专</div>
-      <div class="edu-info">
-        <span class="edu-school">深圳职业技术学院</span>
-        <span class="edu-major">计算机技术应用</span>
-      </div>
-    </div>
   </div>
 </section>
 
