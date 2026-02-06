@@ -1,15 +1,15 @@
-# 码孖AI 博客配置
+# 码孖哥 博客配置
 # GitHub Pages + Jekyll
 
-title: 码孖AI
+title: 码孖哥
 description: >-
-  15年+互联网技术负责人的技术博客 | ToB SaaS · 智能硬件 · AI大模型工程化落地
+  15年+互联网技术负责人的技术博客 | ToB SaaS · 智能货柜 · AI大模型工程化落地
 baseurl: "" # 如果部署到 username.github.io/repo-name，则设置为 "/repo-name"
 url: "" # 你的GitHub Pages URL，例如 "https://username.github.io"
 
 # 作者信息
 author:
-  name: 码孖AI
+  name: 码孖哥
   email: ""
   bio: "技术负责人 / 技术总监 | ToB SaaS · 智能硬件 · AI大模型"
 
@@ -52,7 +52,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "码孖AI"
+      author: "码孖哥"
   - scope:
       path: ""
     values:

@@ -1,7 +1,6 @@
 ---
 layout: page
-title: 关于我
-subtitle: 技术负责人 / 技术总监
+title: 码孖哥
 ---
 
 <div class="resume-page">
@@ -9,7 +8,6 @@ subtitle: 技术负责人 / 技术总监
 <!-- Hero 个人介绍 -->
 <section class="resume-hero">
   <div class="resume-hero-content">
-    <p class="resume-title">技术负责人 / 技术总监</p>
     <p class="resume-tagline">15 年+ 互联网技术负责人 · ToB SaaS · 智能货柜 · AI 大模型工程化落地</p>
     <div class="resume-highlights">
       <div class="highlight-item">
