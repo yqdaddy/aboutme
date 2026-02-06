@@ -3,19 +3,138 @@ layout: default
 title: 首页
 ---
 
-<div class="hero">
+<!-- 新版 Hero 区域 - 左右布局 -->
+<section class="hero-split">
   <div class="container">
-    <div class="hero-content">
-      <h1 class="hero-title">码孖哥</h1>
-      <p class="hero-subtitle">15年+ 互联网技术负责人的技术博客</p>
-      <p class="hero-description">ToB SaaS · 智能货柜 · AI大模型工程化落地</p>
-      <div class="hero-actions">
-        <a href="{{ '/about' | relative_url }}" class="btn btn-primary">关于我</a>
-        <a href="{{ '/archive' | relative_url }}" class="btn btn-secondary">浏览文章</a>
+    <div class="hero-split-grid">
+      <!-- 左侧文字内容 -->
+      <div class="hero-text">
+        <h1 class="hero-headline">把 AI 从概念，<br>变成真正能落地的系统</h1>
+        <div class="hero-subtitles">
+          <p class="hero-subtitle-line">15年+ 互联网技术负责人的技术博客</p>
+          <p class="hero-subtitle-line accent">专注 AI 工程化 · 大模型应用 · 企业级系统架构</p>
+        </div>
+        <p class="hero-intro">
+          记录 AI Agent、Claude Code、RAG、ToB SaaS、智能硬件系统的<br>
+          实战经验、架构设计与真实踩坑，帮你少走弯路。
+        </p>
+        <div class="hero-pills">
+          <span class="pill">AI 工程化</span>
+          <span class="pill">AI Agent / Claude Code</span>
+          <span class="pill">ToB SaaS 架构</span>
+          <span class="pill">智能货柜系统</span>
+          <span class="pill">技术负责人 / CTO</span>
+        </div>
+        <div class="hero-cta">
+          <a href="{{ '/archive' | relative_url }}" class="btn btn-primary btn-lg">查看精选文章</a>
+          <a href="{{ '/about' | relative_url }}" class="btn btn-outline btn-lg">我的项目与解决方案</a>
+        </div>
+      </div>
+      <!-- 右侧图片区域 -->
+      <div class="hero-visual">
+        <div class="hero-illustration">
+          <svg viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- 背景渐变圆 -->
+            <defs>
+              <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.1" />
+                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.15" />
+              </linearGradient>
+              <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#2563eb" />
+                <stop offset="100%" style="stop-color:#7c3aed" />
+              </linearGradient>
+              <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.6" />
+                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.6" />
+              </linearGradient>
+            </defs>
+
+            <!-- 背景装饰圆 -->
+            <circle cx="250" cy="200" r="180" fill="url(#bgGrad)" />
+            <circle cx="250" cy="200" r="140" fill="none" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="8 4" opacity="0.5"/>
+            <circle cx="250" cy="200" r="100" fill="none" stroke="url(#lineGrad)" stroke-width="1" stroke-dasharray="4 4" opacity="0.3"/>
+
+            <!-- 连接线 -->
+            <line x1="250" y1="200" x2="120" y2="100" stroke="url(#lineGrad)" stroke-width="2"/>
+            <line x1="250" y1="200" x2="380" y2="100" stroke="url(#lineGrad)" stroke-width="2"/>
+            <line x1="250" y1="200" x2="100" y2="250" stroke="url(#lineGrad)" stroke-width="2"/>
+            <line x1="250" y1="200" x2="400" y2="250" stroke="url(#lineGrad)" stroke-width="2"/>
+            <line x1="250" y1="200" x2="180" y2="320" stroke="url(#lineGrad)" stroke-width="2"/>
+            <line x1="250" y1="200" x2="320" y2="320" stroke="url(#lineGrad)" stroke-width="2"/>
+
+            <!-- 中心 AI 节点 -->
+            <circle cx="250" cy="200" r="45" fill="url(#nodeGrad)" opacity="0.9"/>
+            <text x="250" y="195" text-anchor="middle" fill="white" font-size="14" font-weight="600">AI</text>
+            <text x="250" y="212" text-anchor="middle" fill="white" font-size="10" opacity="0.9">Agent</text>
+
+            <!-- 周围节点 -->
+            <!-- RAG -->
+            <circle cx="120" cy="100" r="28" fill="#1d4ed8" opacity="0.85"/>
+            <text x="120" y="104" text-anchor="middle" fill="white" font-size="11" font-weight="500">RAG</text>
+
+            <!-- LLM -->
+            <circle cx="380" cy="100" r="28" fill="#7c3aed" opacity="0.85"/>
+            <text x="380" y="104" text-anchor="middle" fill="white" font-size="11" font-weight="500">LLM</text>
+
+            <!-- SaaS -->
+            <circle cx="100" cy="250" r="28" fill="#0891b2" opacity="0.85"/>
+            <text x="100" y="254" text-anchor="middle" fill="white" font-size="11" font-weight="500">SaaS</text>
+
+            <!-- IoT -->
+            <circle cx="400" cy="250" r="28" fill="#059669" opacity="0.85"/>
+            <text x="400" y="254" text-anchor="middle" fill="white" font-size="11" font-weight="500">IoT</text>
+
+            <!-- 数据 -->
+            <circle cx="180" cy="320" r="28" fill="#dc2626" opacity="0.85"/>
+            <text x="180" y="324" text-anchor="middle" fill="white" font-size="11" font-weight="500">Data</text>
+
+            <!-- API -->
+            <circle cx="320" cy="320" r="28" fill="#ca8a04" opacity="0.85"/>
+            <text x="320" y="324" text-anchor="middle" fill="white" font-size="11" font-weight="500">API</text>
+
+            <!-- 数据流动画点 -->
+            <circle r="4" fill="#60a5fa">
+              <animateMotion dur="3s" repeatCount="indefinite" path="M250,200 L120,100"/>
+            </circle>
+            <circle r="4" fill="#a78bfa">
+              <animateMotion dur="3.5s" repeatCount="indefinite" path="M250,200 L380,100"/>
+            </circle>
+            <circle r="4" fill="#22d3ee">
+              <animateMotion dur="4s" repeatCount="indefinite" path="M250,200 L100,250"/>
+            </circle>
+            <circle r="4" fill="#34d399">
+              <animateMotion dur="3.2s" repeatCount="indefinite" path="M250,200 L400,250"/>
+            </circle>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- 第一屏底部信息卡片 -->
+<section class="hero-features">
+  <div class="container">
+    <div class="hero-features-grid">
+      <div class="hero-feature-card">
+        <div class="feature-icon">🤖</div>
+        <h3>AI 工程化</h3>
+        <p>从 Prompt 到系统级落地</p>
+      </div>
+      <div class="hero-feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Claude Code / Agent</h3>
+        <p>自动化真实生产环境</p>
+      </div>
+      <div class="hero-feature-card">
+        <div class="feature-icon">🏗️</div>
+        <h3>ToB 系统架构</h3>
+        <p>SaaS + 硬件 + 数据闭环</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- 最新文章 -->
 <section class="latest-posts">
@@ -97,55 +216,6 @@ title: 首页
         <span class="highlight-badge">S2B2C</span>
         <h3>鲸旦电商平台</h3>
         <p>微服务架构，支撑百万级用户规模，自动化部署与多端统一开发</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 技术栈 -->
-<section class="techstack-section">
-  <div class="container">
-    <h2 class="section-title">技术栈</h2>
-    <div class="techstack-wrapper">
-      <div class="techstack-category">
-        <h4>后端技术</h4>
-        <div class="tech-tags">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>Spring Cloud</span>
-          <span>MySQL</span>
-          <span>Redis</span>
-          <span>Elasticsearch</span>
-          <span>RabbitMQ</span>
-          <span>Docker</span>
-        </div>
-      </div>
-      <div class="techstack-category">
-        <h4>AI & 数据</h4>
-        <div class="tech-tags">
-          <span>LLM</span>
-          <span>RAG</span>
-          <span>向量检索</span>
-          <span>AI 知识库</span>
-          <span>语义搜索</span>
-        </div>
-      </div>
-      <div class="techstack-category">
-        <h4>AI 研发提效</h4>
-        <div class="tech-tags">
-          <span>Claude Code</span>
-          <span>Cursor</span>
-          <span>Trae</span>
-          <span>CodeBuddy</span>
-        </div>
-      </div>
-      <div class="techstack-category">
-        <h4>前端 & 多端</h4>
-        <div class="tech-tags">
-          <span>Vue</span>
-          <span>UniApp</span>
-          <span>小程序</span>
-        </div>
       </div>
     </div>
   </div>
