@@ -137,12 +137,12 @@ title: 码孖哥
     工作经历
   </h2>
   <div class="timeline">
-    <!-- 万鲸科技 -->
+    <!-- 公司A -->
     <div class="timeline-item">
       <div class="timeline-marker current"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <h3 class="company-name">深圳市万鲸科技有限公司</h3>
+          <h3 class="company-name">某 ToB SaaS 科技公司</h3>
           <span class="job-title">技术总监</span>
           <span class="job-period">2019.10 – 至今</span>
         </div>
@@ -169,12 +169,12 @@ title: 码孖哥
         </div>
       </div>
     </div>
-    <!-- 腾兴无限 -->
+    <!-- 公司B -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <h3 class="company-name">深圳市腾兴无限科技有限公司</h3>
+          <h3 class="company-name">某广告科技公司</h3>
           <span class="job-title">项目技术经理</span>
           <span class="job-period">2016.05 – 2019.10</span>
         </div>
@@ -187,12 +187,12 @@ title: 码孖哥
         </div>
       </div>
     </div>
-    <!-- 锐讯无限 -->
+    <!-- 公司C -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <h3 class="company-name">深圳市锐讯无限科技有限公司</h3>
+          <h3 class="company-name">某移动互联网公司</h3>
           <span class="job-title">软件工程师</span>
           <span class="job-period">2012.12 – 2016.05</span>
         </div>
@@ -205,12 +205,12 @@ title: 码孖哥
         </div>
       </div>
     </div>
-    <!-- 彩秀科技 -->
+    <!-- 公司D -->
     <div class="timeline-item">
       <div class="timeline-marker"></div>
       <div class="timeline-content">
         <div class="timeline-header">
-          <h3 class="company-name">深圳市彩秀科技有限公司</h3>
+          <h3 class="company-name">某移动应用公司</h3>
           <span class="job-title">软件工程师</span>
           <span class="job-period">2010.03 – 2012.12</span>
         </div>
