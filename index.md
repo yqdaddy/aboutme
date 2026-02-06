@@ -17,6 +17,38 @@ title: 首页
   </div>
 </div>
 
+<!-- 最新文章 -->
+<section class="latest-posts">
+  <div class="container">
+    <h2 class="section-title">最新文章</h2>
+    <div class="posts-grid">
+      {% for post in site.posts limit:6 %}
+      <article class="post-card">
+        <a href="{{ post.url | relative_url }}" class="post-card-link">
+          <div class="post-card-content">
+            <time class="post-card-date">{{ post.date | date: "%Y-%m-%d" }}</time>
+            <h3 class="post-card-title">{{ post.title }}</h3>
+            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            {% if post.tags.size > 0 %}
+            <div class="post-card-tags">
+              {% for tag in post.tags limit:3 %}
+              <span class="tag-small">#{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        </a>
+      </article>
+      {% endfor %}
+    </div>
+    {% if site.posts.size > 6 %}
+    <div class="section-more">
+      <a href="{{ '/archive' | relative_url }}" class="btn btn-outline">查看全部文章</a>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
 <!-- 核心能力 -->
 <section class="capabilities-section">
   <div class="container">
@@ -140,38 +172,6 @@ title: 首页
         <span class="stat-label">核心项目交付</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- 最新文章 -->
-<section class="latest-posts">
-  <div class="container">
-    <h2 class="section-title">最新文章</h2>
-    <div class="posts-grid">
-      {% for post in site.posts limit:6 %}
-      <article class="post-card">
-        <a href="{{ post.url | relative_url }}" class="post-card-link">
-          <div class="post-card-content">
-            <time class="post-card-date">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <h3 class="post-card-title">{{ post.title }}</h3>
-            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            {% if post.tags.size > 0 %}
-            <div class="post-card-tags">
-              {% for tag in post.tags limit:3 %}
-              <span class="tag-small">#{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
-          </div>
-        </a>
-      </article>
-      {% endfor %}
-    </div>
-    {% if site.posts.size > 6 %}
-    <div class="section-more">
-      <a href="{{ '/archive' | relative_url }}" class="btn btn-outline">查看全部文章</a>
-    </div>
-    {% endif %}
   </div>
 </section>
 
