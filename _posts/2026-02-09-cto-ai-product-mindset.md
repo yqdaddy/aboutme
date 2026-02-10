@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CTO 视角：用 AI 构建产品的 5 个认知转变"
-date: 2026-02-01 10:00:00 +0800
+date: 2026-02-09 10:00:00 +0800
 categories: [产品思考]
 tags: [AI, CTO, 产品方法论]
 ---
