@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 码孖哥
+title: 码孖AI
 ---
 
 <div class="resume-page">
