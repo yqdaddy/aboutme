@@ -1388,6 +1388,20 @@ body {
   text-decoration: underline;
 }
 
+.icp-beian {
+  margin-top: var(--spacing-sm);
+}
+
+.icp-beian a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.icp-beian a:hover {
+  color: var(--text-secondary);
+}
+
 /* === 响应式设计 === */
 @media (max-width: 768px) {
   html {
