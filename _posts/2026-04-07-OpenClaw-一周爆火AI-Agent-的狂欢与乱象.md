@@ -7,10 +7,6 @@ tags: [Claude, AI, Agent, 技术]
 author: 码孖AI
 ---
 
-=============================
-
-卓勋说
-
 我翻开 GitHub 一查，这项目没有年代，歪歪斜斜的每页上都写着： 
 
 "autonomous agent" 几个字。
