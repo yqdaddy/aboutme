@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RAG 工程化落地：从理论到百万级数据实践"
-date: 2024-01-20 14:30:00 +0800
+date: 2025-12-10 14:30:00 +0800
 categories: [AI, 架构]
 tags: [RAG, LLM, 向量检索, AI工程化]
 author: 码孖AI
