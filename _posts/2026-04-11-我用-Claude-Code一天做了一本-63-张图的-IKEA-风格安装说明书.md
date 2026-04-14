@@ -7,10 +7,6 @@ tags: [Claude, AI, Agent, 技术]
 author: 码孖AI
 ---
 
-=========================================
-
-卓勋说
-
 > 不是设计师，没学过 Illustrator ，连 IKEA 说明书长什么样都是现查的。但最后，我真干出来了。
 
 ![01_bz00001_配件总览俯视全景](https://mmbiz.qpic.cn/mmbiz_jpg/b88KvCjdBlET1gjFBTvzlKILhwKukS7wfO0huw9fY4L6yutJPjfwtAljxuUoPYKeevu1sNLoLOvo0zCWtE93R8BJxGGOLjlhtEh00W6D1CU/640?from=appmsg&watermark=1&tp=webp&wxfrom=5&wx_lazy=1#imgIndex=0)
