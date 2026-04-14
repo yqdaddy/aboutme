@@ -1,7 +1,48 @@
-// 码孖AI 博客主脚本
+// 码孖AI 博客主脚本 v2.0
+// 支持深色模式切换、平滑滚动、代码复制
 
 document.addEventListener('DOMContentLoaded', function() {
-  // 移动端导航切换
+
+  // === 主题切换功能 ===
+  const themeToggle = document.querySelector('.theme-toggle');
+  const root = document.documentElement;
+
+  // 从本地存储读取主题偏好
+  const savedTheme = localStorage.getItem('theme');
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // 设置初始主题
+  if (savedTheme) {
+    root.setAttribute('data-theme', savedTheme);
+  } else if (systemPrefersDark) {
+    root.setAttribute('data-theme', 'dark');
+  }
+
+  // 主题切换点击事件
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function() {
+      const currentTheme = root.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+      root.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      // 添加切换动画反馈
+      themeToggle.style.transform = 'scale(0.95)';
+      setTimeout(function() {
+        themeToggle.style.transform = 'scale(1)';
+      }, 150);
+    });
+
+    // 监听系统主题变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+      if (!localStorage.getItem('theme')) {
+        root.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
+  // === 移动端导航切换 ===
   const navToggle = document.querySelector('.nav-toggle');
   const siteNav = document.querySelector('.site-nav');
 
