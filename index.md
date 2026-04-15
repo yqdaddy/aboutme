@@ -314,3 +314,54 @@ title: 首页
     </div>
   </div>
 </section>
+
+<!-- 成长时间线 -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="timeline-container">
+      <svg viewBox="0 0 800 60" class="timeline-svg" preserveAspectRatio="xMidYMid meet">
+        <!-- 渐变定义 -->
+        <defs>
+          <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#fcd34d"/>
+            <stop offset="50%" style="stop-color:#6366f1"/>
+            <stop offset="100%" style="stop-color:#ec4899"/>
+          </linearGradient>
+        </defs>
+
+        <!-- 时间线主线 -->
+        <line x1="50" y1="30" x2="750" y2="30" stroke="#e2e8f0" stroke-width="3"/>
+
+        <!-- 2010 - 入行 -->
+        <circle cx="50" cy="30" r="4" fill="#fcd34d"/>
+        <text x="50" y="20" text-anchor="middle" style="font-size:10px;fill:#92400e;font-weight:600;">2010</text>
+        <text x="50" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">入行</text>
+
+        <!-- 2015 - 技术负责人 -->
+        <circle cx="268.75" cy="30" r="4" fill="#f59e0b"/>
+        <text x="268.75" y="20" text-anchor="middle" style="font-size:10px;fill:#92400e;font-weight:600;">2015</text>
+        <text x="268.75" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">技术负责人</text>
+
+        <!-- 2020 - 架构师 -->
+        <circle cx="487.5" cy="30" r="5" fill="#6366f1"/>
+        <text x="487.5" y="20" text-anchor="middle" style="font-size:10px;fill:#1e293b;font-weight:600;">2020</text>
+        <text x="487.5" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">架构师</text>
+
+        <!-- 2024 - AI探索 -->
+        <circle cx="662.5" cy="30" r="4" fill="#8b5cf6"/>
+        <text x="662.5" y="20" text-anchor="middle" style="font-size:10px;fill:#6366f1;font-weight:600;">2024</text>
+        <text x="662.5" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">AI探索</text>
+
+        <!-- 2026 - AI工程化 -->
+        <circle cx="750" cy="30" r="6" fill="#ec4899" stroke="#fce7f3" stroke-width="2"/>
+        <text x="750" y="20" text-anchor="middle" style="font-size:10px;fill:#ec4899;font-weight:700;">2026</text>
+        <text x="750" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;font-weight:600;">AI工程化</text>
+
+        <!-- 连接动画线 -->
+        <line x1="50" y1="30" x2="750" y2="30" stroke="url(#timeGrad)" stroke-width="3" stroke-dasharray="8 4">
+          <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" repeatCount="indefinite"/>
+        </line>
+      </svg>
+    </div>
+  </div>
+</section>
