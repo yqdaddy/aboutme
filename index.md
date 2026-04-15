@@ -365,3 +365,101 @@ title: 首页
     </div>
   </div>
 </section>
+
+<!-- 技术栈矩阵 -->
+<section class="tech-matrix-section">
+  <div class="container">
+    <div class="tech-matrix">
+      <div class="tech-matrix-title">技术栈覆盖</div>
+      <div class="tech-matrix-grid">
+        <!-- AI/大模型 -->
+        <div class="tech-item ai">
+          <div class="tech-icon">🤖</div>
+          <div class="tech-name">Claude</div>
+          <div class="tech-desc">API/SDK</div>
+        </div>
+        <div class="tech-item ai">
+          <div class="tech-icon">🧠</div>
+          <div class="tech-name">RAG</div>
+          <div class="tech-desc">知识库</div>
+        </div>
+        <div class="tech-item ai">
+          <div class="tech-icon">⚡</div>
+          <div class="tech-name">Agent</div>
+          <div class="tech-desc">自动化</div>
+        </div>
+        <div class="tech-item ai">
+          <div class="tech-icon">📝</div>
+          <div class="tech-name">Prompt</div>
+          <div class="tech-desc">工程化</div>
+        </div>
+
+        <!-- 后端 -->
+        <div class="tech-item backend">
+          <div class="tech-icon">🐘</div>
+          <div class="tech-name">PHP</div>
+          <div class="tech-desc">15年</div>
+        </div>
+        <div class="tech-item backend">
+          <div class="tech-icon">☕</div>
+          <div class="tech-name">Java</div>
+          <div class="tech-desc">微服务</div>
+        </div>
+        <div class="tech-item backend">
+          <div class="tech-icon">🐍</div>
+          <div class="tech-name">Python</div>
+          <div class="tech-desc">AI</div>
+        </div>
+        <div class="tech-item backend">
+          <div class="tech-icon">🗄️</div>
+          <div class="tech-name">MySQL</div>
+          <div class="tech-desc">高并发</div>
+        </div>
+
+        <!-- 前端 -->
+        <div class="tech-item frontend">
+          <div class="tech-icon">⚛️</div>
+          <div class="tech-name">Vue</div>
+          <div class="tech-desc">SPA</div>
+        </div>
+        <div class="tech-item frontend">
+          <div class="tech-icon">📱</div>
+          <div class="tech-name">UniApp</div>
+          <div class="tech-desc">多端</div>
+        </div>
+        <div class="tech-item frontend">
+          <div class="tech-icon">🎨</div>
+          <div class="tech-name">小程序</div>
+          <div class="tech-desc">微信</div>
+        </div>
+        <div class="tech-item frontend">
+          <div class="tech-icon">🌐</div>
+          <div class="tech-name">H5</div>
+          <div class="tech-desc">跨平台</div>
+        </div>
+
+        <!-- 其他 -->
+        <div class="tech-item other">
+          <div class="tech-icon">☁️</div>
+          <div class="tech-name">阿里云</div>
+          <div class="tech-desc">部署</div>
+        </div>
+        <div class="tech-item other">
+          <div class="tech-icon">🔄</div>
+          <div class="tech-name">CI/CD</div>
+          <div class="tech-desc">自动化</div>
+        </div>
+        <div class="tech-item other">
+          <div class="tech-icon">📊</div>
+          <div class="tech-name">监控</div>
+          <div class="tech-desc">运维</div>
+        </div>
+        <div class="tech-item other">
+          <div class="tech-icon">👥</div>
+          <div class="tech-name">团队</div>
+          <div class="tech-desc">10+人</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -2552,3 +2552,92 @@ body {
 [data-theme="dark"] ::selection {
   background: rgba(236, 72, 153, 0.4);
 }
+
+/* === 技术栈矩阵 === */
+.tech-matrix-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.tech-matrix {
+  background: #1e293b;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.tech-matrix-title {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.tech-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.tech-item {
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.tech-item:hover {
+  transform: translateY(-2px);
+}
+
+.tech-icon {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.tech-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.tech-desc {
+  font-size: 10px;
+  color: #94a3b8;
+}
+
+/* 技术栈分类颜色 */
+.tech-item.ai {
+  background: rgba(99, 102, 241, 0.3);
+  border: 1px solid #6366f1;
+}
+
+.tech-item.backend {
+  background: rgba(16, 185, 129, 0.3);
+  border: 1px solid #10b981;
+}
+
+.tech-item.frontend {
+  background: rgba(139, 92, 246, 0.3);
+  border: 1px solid #8b5cf6;
+}
+
+.tech-item.other {
+  background: rgba(245, 158, 11, 0.3);
+  border: 1px solid #f59e0b;
+}
+
+/* 技术栈矩阵响应式 */
+@media (max-width: 768px) {
+  .tech-matrix-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-matrix {
+    padding: 16px;
+  }
+
+  .tech-item {
+    padding: 10px;
+  }
+}
