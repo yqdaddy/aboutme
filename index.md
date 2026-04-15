@@ -280,18 +280,37 @@ title: 首页
   </div>
 </section>
 
-<!-- 关于我预览 -->
-<section class="about-preview">
+<!-- 作者区域 -->
+<section class="author-section">
   <div class="container">
-    <div class="about-card">
-      <h2>关于我</h2>
-      <p>15年+ 互联网行业技术负责人，长期深耕 ToB SaaS、平台型系统、智能货柜与 AI 工程化应用，具备从 0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营的完整闭环经验。</p>
-      <div class="about-strengths">
-        <div class="strength-tag">🔧 能下沉一线解决复杂系统与架构问题</div>
-        <div class="strength-tag">📈 能自上而下规划技术路线与演进策略</div>
-        <div class="strength-tag">👥 能带领技术团队稳定交付，支撑业务持续增长</div>
+    <div class="author-card">
+      <div class="author-avatar-area">
+        <div class="author-avatar">ZX</div>
+        <div class="author-name">卓勋</div>
+        <div class="author-brand">码孖AI</div>
       </div>
-      <a href="{{ '/about' | relative_url }}" class="btn btn-primary">了解更多</a>
+      <div class="author-info">
+        <p class="author-intro">15年+ 技术负责人，深耕 ToB SaaS、智能硬件、AI工程化。能下沉一线解决复杂问题，能规划技术路线，能带队稳定交付。</p>
+        <div class="author-strengths">
+          <span class="author-strength-tag">🔧 下沉一线</span>
+          <span class="author-strength-tag">📈 规划路线</span>
+          <span class="author-strength-tag">👥 带队交付</span>
+        </div>
+        <div class="author-stats">
+          <div class="author-stat">
+            <div class="author-stat-number">15+</div>
+            <div class="author-stat-label">年经验</div>
+          </div>
+          <div class="author-stat">
+            <div class="author-stat-number">300万+</div>
+            <div class="author-stat-label">年服务用户</div>
+          </div>
+          <div class="author-stat">
+            <div class="author-stat-number">6+</div>
+            <div class="author-stat-label">核心项目</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
