@@ -120,6 +120,11 @@
 
 - 标签：圆角、彩色背景（根据分类）、字体11px
 
+**彩色条与标签颜色关系：**
+- 彩色条颜色 = 文章主分类（第一个标签）对应的主题色
+- 标签使用相同色系的较浅色作为背景：`rgba(主色RGB, 0.15)`
+- 示例：主分类"Claude Code" → 彩色条 `#6366f1 → #8b5cf6 → #ec4899`，标签背景 `rgba(99, 102, 241, 0.15)`，文字 `#6366f1`
+
 - 悬停微交互：
   - `transform: translateY(-4px) scale(1.02)`
   - 阴影增强：`box-shadow: 0 12px 24px rgba(0,0,0,0.1)`
@@ -156,27 +161,49 @@
 **嵌入时间线（SVG）：**
 
 ```svg
-<!-- 时间线节点 -->
-2010(入行) → 2015(技术负责人) → 2020(架构师) → 2024(AI探索) → 2026(AI工程化)
+<svg viewBox="0 0 800 60" class="timeline-svg" preserveAspectRatio="xMidYMid meet">
+  <!-- 时间线主线 -->
+  <line x1="50" y1="30" x2="750" y2="30" stroke="#e2e8f0" stroke-width="3"/>
 
-<!-- 节点样式 -->
-- 2010: 小圆，#fcd34d（暖黄）
-- 2015: 小圆，#f59e0b
-- 2020: 中圆，#6366f1（蓝紫）
-- 2024: 小圆，#8b5cf6
-- 2026: 大圆，#ec4899，stroke边框
+  <!-- 渐变定义 -->
+  <defs>
+    <linearGradient id="timeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fcd34d"/>
+      <stop offset="50%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#ec4899"/>
+    </linearGradient>
+  </defs>
 
-<!-- 连接线动画 -->
-渐变色：#fcd34d → #6366f1 → #ec4899
-stroke-dasharray: 8 4
-动画：沿线条流动效果
+  <!-- 节点：具体坐标由实现者根据容器宽度动态计算 -->
+  <!-- 节点间距：均分或按年份跨度比例 -->
+  <!-- 节点直径：小圆 8px / 中圆 10px / 大圆 12px -->
+
+  <!-- 2010 - 入行（小圆） -->
+  <circle cx="50" cy="30" r="4" fill="#fcd34d"/>
+  <text x="50" y="20" text-anchor="middle" style="font-size:10px;fill:#92400e;">2010</text>
+  <text x="50" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">入行</text>
+
+  <!-- 2015, 2020, 2024, 2026 节点类似结构 -->
+
+  <!-- 连接动画线 -->
+  <line x1="50" y1="30" x2="750" y2="30" stroke="url(#timeGrad)" stroke-width="3" stroke-dasharray="8 4">
+    <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" repeatCount="indefinite"/>
+  </line>
+</svg>
 ```
+
+**节点样式规则：**
+- 2010: 小圆（r=4），#fcd34d（暖黄）
+- 2015: 小圆（r=4），#f59e0b
+- 2020: 中圆（r=5），#6366f1（蓝紫）
+- 2024: 小圆（r=4），#8b5cf6
+- 2026: 大圆（r=6），#ec4899，stroke="#fce7f3" stroke-width="2"
 
 ---
 
 ### 3.4 技术栈矩阵
 
-**布局：** 深色背景（#1e293b）+ 4x4 网格
+**布局：** 深色背景（#1e293b）+ 4列 x 4行网格（共16项）
 
 **卡片样式：**
 ```
@@ -211,11 +238,13 @@ stroke-dasharray: 8 4
 - 下方项目名称
 
 **内容：**
-| 标签 | 项目名 |
-|------|--------|
-| ToB+ToC | 水贝珠宝平台 |
-| 0→1 | 智能货柜系统 |
-| S2B2C | 鲸旦电商 |
+| 标签 | 项目名 | 跳转链接 |
+|------|--------|----------|
+| ToB+ToC | 水贝珠宝平台 | `/about#水贝珠宝` 或外链 |
+| 0→1 | 智能货柜系统 | `/about#智能货柜` |
+| S2B2C | 鲸旦电商 | `/about#鲸旦电商` |
+
+**缩略图：** 项目 logo 或截图裁剪，可选
 
 ---
 
@@ -287,13 +316,44 @@ stroke-dasharray: 8 4
 **Mobile (< 768px):**
 - Hero：单列布局，动效图移至文字下方或隐藏
 - 文章卡片：单列堆叠
-- 技术栈矩阵：2x8 网格
+- 技术栈矩阵：2列 x 8行网格（保持完整16项）
 - 时间线：简化节点，缩小尺寸
 
 **Tablet (768px - 1024px):**
 - Hero：左右布局保持，动效图缩小
 - 文章卡片：2列网格
-- 技术栈矩阵：4x4 保持
+- 技术栈矩阵：4列 x 4行保持
+
+### 5.3 深色模式适配
+
+项目已支持深色模式，需要以下适配：
+
+**作者卡片背景：**
+- Light: `linear-gradient(135deg, #fef3c7, #fde68a)`
+- Dark: `linear-gradient(135deg, #422006, #78350f)`（深棕暖色，保持温度感）
+
+**技术栈矩阵背景：**
+- Light: `#1e293b`（深色，无需调整）
+- Dark: `#0f172a`（更深的背景）
+
+**彩色条：**
+- Dark 模式：降低亮度 20%，保持辨识度
+- Claude Code: `#4f46e5 → #7c3aed → #db2777`
+
+**标签背景：**
+- Dark 模式：增加透明度至 0.2，降低对比度刺激
+
+**文字颜色：**
+- 确保对比度符合 WCAG AA 标准（4.5:1）
+- Light 模式深色文字 → Dark 模式浅色文字
+
+### 5.4 作者卡片移动端布局
+
+**Mobile (< 768px):**
+- 头像居中，信息在下方垂直排列
+- 标签换行显示，每行 1-2 个
+- 数据行保持横向排列（15+年 | 300万+用户 | 6+项目）
+- 时间线缩小至容器 80% 宽度
 
 ---
 
@@ -357,11 +417,20 @@ stroke-dasharray: 8 4
 - [ ] CSS 动画使用 transform/opacity
 - [ ] 页面加载无明显延迟
 
+### 8.4 性能量化指标
+
+- [ ] LCP (Largest Contentful Paint) < 2.5s
+- [ ] 动画帧率 >= 55fps（Chrome DevTools Performance）
+- [ ] CSS 文件增量 < 5KB（gzip 压缩后）
+- [ ] SVG 文件大小 < 10KB（时间线 + 技术栈矩阵）
+
 ---
 
 ## 9. 附录
 
 ### 9.1 颜色参考
+
+**Light 模式：**
 
 | 用途 | 颜色值 |
 |------|--------|
@@ -372,6 +441,17 @@ stroke-dasharray: 8 4
 | AI Agent | #8b5cf6 |
 | ToB SaaS | #10b981 |
 | 实战案例 | #f59e0b |
+
+**Dark 模式：**
+
+| 用途 | 颜色值 |
+|------|--------|
+| 暖色渐变（深棕） | #422006 → #78350f |
+| 矩阵背景 | #0f172a |
+| Claude Code | #4f46e5 |
+| AI Agent | #7c3aed |
+| ToB SaaS | #059669 |
+| 实战案例 | #d97706 |
 
 ### 9.2 字体参考
 
