@@ -400,7 +400,7 @@ body {
 }
 
 .post-card-content {
-  padding: var(--spacing-xl);
+  padding: var(--spacing-5);  /* 20px，减少顶部空白 */
 }
 
 .post-card-date {
@@ -414,7 +414,7 @@ body {
   color: var(--text-color);
   /* === 文章卡片内容 - 层次优化 === */
 .post-card-content {
-  padding: var(--spacing-8);
+  padding: var(--spacing-5);  /* 20px */
 }
 
 .post-card-date {

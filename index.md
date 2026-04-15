@@ -261,23 +261,23 @@ title: 首页
         <text x="50" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">入行</text>
 
         <!-- 2015 - 技术负责人 -->
-        <circle cx="268.75" cy="30" r="4" fill="#f59e0b"/>
-        <text x="268.75" y="20" text-anchor="middle" style="font-size:10px;fill:#92400e;font-weight:600;">2015</text>
-        <text x="268.75" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">技术负责人</text>
+        <circle cx="283.33" cy="30" r="4" fill="#f59e0b"/>
+        <text x="283.33" y="20" text-anchor="middle" style="font-size:10px;fill:#92400e;font-weight:600;">2015</text>
+        <text x="283.33" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">技术负责人</text>
 
         <!-- 2020 - 架构师 -->
-        <circle cx="487.5" cy="30" r="5" fill="#6366f1"/>
-        <text x="487.5" y="20" text-anchor="middle" style="font-size:10px;fill:#1e293b;font-weight:600;">2020</text>
-        <text x="487.5" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">架构师</text>
+        <circle cx="516.67" cy="30" r="5" fill="#6366f1"/>
+        <text x="516.67" y="20" text-anchor="middle" style="font-size:10px;fill:#1e293b;font-weight:600;">2020</text>
+        <text x="516.67" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">架构师</text>
 
-        <!-- 2024 - AI探索 -->
-        <circle cx="662.5" cy="30" r="4" fill="#8b5cf6"/>
-        <text x="662.5" y="20" text-anchor="middle" style="font-size:10px;fill:#6366f1;font-weight:600;">2024</text>
-        <text x="662.5" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">AI探索</text>
+        <!-- 2022 - AI探索 -->
+        <circle cx="610" cy="30" r="4" fill="#8b5cf6"/>
+        <text x="610" y="20" text-anchor="middle" style="font-size:10px;fill:#6366f1;font-weight:600;">2022</text>
+        <text x="610" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;">AI探索</text>
 
-        <!-- 2026 - AI工程化 -->
+        <!-- 2025 - AI工程化 -->
         <circle cx="750" cy="30" r="6" fill="#ec4899" stroke="#fce7f3" stroke-width="2"/>
-        <text x="750" y="20" text-anchor="middle" style="font-size:10px;fill:#ec4899;font-weight:700;">2026</text>
+        <text x="750" y="20" text-anchor="middle" style="font-size:10px;fill:#ec4899;font-weight:700;">2025</text>
         <text x="750" y="45" text-anchor="middle" style="font-size:9px;fill:#64748b;font-weight:600;">AI工程化</text>
 
         <!-- 连接动画线 -->
