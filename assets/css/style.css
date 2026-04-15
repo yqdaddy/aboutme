@@ -2816,3 +2816,37 @@ body {
     transform: translateY(0);
   }
 }
+
+/* === 区块间距 === */
+
+/* Hero 与特性卡片：48px */
+.hero-features {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+/* 特性与文章区：64px */
+.latest-posts {
+  padding-top: 64px;
+}
+
+/* 文章区与作者区：64px */
+.author-section {
+  padding-top: 64px;
+}
+
+/* 作者区与技术栈：48px */
+.timeline-section {
+  padding-top: 48px;
+}
+
+/* 时间线与技术栈：紧邻，无额外间距 */
+.tech-matrix-section {
+  padding-top: 48px;
+}
+
+/* 技术栈与项目案例：48px */
+.project-thumbnails {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}

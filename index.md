@@ -203,80 +203,6 @@ title: 首页
   </div>
 </section>
 
-<!-- 核心能力 -->
-<section class="capabilities-section">
-  <div class="container">
-    <h2 class="section-title">核心能力</h2>
-    <div class="capabilities-grid">
-      <div class="capability-card">
-        <div class="capability-icon">🏗️</div>
-        <h3>系统架构</h3>
-        <p>ToB SaaS 平台架构设计，高并发/高可用分布式系统，微服务架构落地</p>
-      </div>
-      <div class="capability-card">
-        <div class="capability-icon">🤖</div>
-        <h3>AI 工程化</h3>
-        <p>大模型应用落地，RAG 检索增强生成，企业级 AI 知识库构建</p>
-      </div>
-      <div class="capability-card">
-        <div class="capability-icon">👥</div>
-        <h3>团队管理</h3>
-        <p>10+ 人技术团队搭建与管理，研发流程规范化，技术与业务深度协同</p>
-      </div>
-      <div class="capability-card">
-        <div class="capability-icon">📱</div>
-        <h3>多端开发</h3>
-        <p>后台 / 小程序 / App / H5 多端统一架构，UniApp 跨平台方案</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 项目案例缩略 -->
-<section class="project-thumbnails">
-  <div class="container">
-    <div class="project-thumbnails-title">项目案例</div>
-    <div class="project-thumbnails-grid">
-      <a href="{{ '/about' | relative_url }}#水贝珠宝" class="project-thumbnail">
-        <div class="project-badge">ToB + ToC</div>
-        <div class="project-name">水贝珠宝平台</div>
-      </a>
-      <a href="{{ '/about' | relative_url }}#智能货柜" class="project-thumbnail">
-        <div class="project-badge">0 → 1</div>
-        <div class="project-name">智能货柜系统</div>
-      </a>
-      <a href="{{ '/about' | relative_url }}#鲸旦电商" class="project-thumbnail">
-        <div class="project-badge">S2B2C</div>
-        <div class="project-name">鲸旦电商</div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- 数据亮点 -->
-<section class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <span class="stat-number">15+</span>
-        <span class="stat-label">年技术经验</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">300万+</span>
-        <span class="stat-label">年服务用户</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">10+</span>
-        <span class="stat-label">人团队管理</span>
-      </div>
-      <div class="stat-item">
-        <span class="stat-number">6+</span>
-        <span class="stat-label">核心项目交付</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- 作者区域 -->
 <section class="author-section">
   <div class="container">
@@ -457,6 +383,27 @@ title: 首页
           <div class="tech-desc">10+人</div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- 项目案例缩略 -->
+<section class="project-thumbnails">
+  <div class="container">
+    <div class="project-thumbnails-title">项目案例</div>
+    <div class="project-thumbnails-grid">
+      <a href="{{ '/about' | relative_url }}#水贝珠宝" class="project-thumbnail">
+        <div class="project-badge">ToB + ToC</div>
+        <div class="project-name">水贝珠宝平台</div>
+      </a>
+      <a href="{{ '/about' | relative_url }}#智能货柜" class="project-thumbnail">
+        <div class="project-badge">0 → 1</div>
+        <div class="project-name">智能货柜系统</div>
+      </a>
+      <a href="{{ '/about' | relative_url }}#鲸旦电商" class="project-thumbnail">
+        <div class="project-badge">S2B2C</div>
+        <div class="project-name">鲸旦电商</div>
+      </a>
     </div>
   </div>
 </section>
