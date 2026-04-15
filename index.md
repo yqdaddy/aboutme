@@ -142,21 +142,56 @@ title: 首页
     <h2 class="section-title">最新文章</h2>
     <div class="posts-grid">
       {% for post in site.posts limit:6 %}
-      <article class="post-card">
-        <a href="{{ post.url | relative_url }}" class="post-card-link">
-          <div class="post-card-content">
-            <time class="post-card-date">{{ post.date | date: "%Y-%m-%d" }}</time>
-            <h3 class="post-card-title">{{ post.title }}</h3>
-            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
-            {% if post.tags.size > 0 %}
-            <div class="post-card-tags">
-              {% for tag in post.tags limit:3 %}
-              <span class="tag-small">#{{ tag }}</span>
-              {% endfor %}
+      {% assign index = forloop.index0 %}
+
+      <!-- 标签颜色分类判断 -->
+      {% assign color_class = 'tob-saas' %}
+      {% assign icon_emoji = '🏗️' %}
+      {% for tag in post.tags %}
+        {% if tag contains 'Claude' or tag contains 'AI' or tag contains 'RAG' or tag contains 'Agent' or tag contains 'LLM' %}
+          {% assign color_class = 'claude-code' %}
+          {% assign icon_emoji = '🧠' %}
+          {% break %}
+        {% elsif tag contains '实战' or tag contains '案例' or tag contains '0到1' %}
+          {% assign color_class = 'case-study' %}
+          {% assign icon_emoji = '⚡' %}
+          {% break %}
+        {% elsif tag contains '踩坑' or tag contains '避坑' or tag contains '总结' %}
+          {% assign color_class = 'pitfall' %}
+          {% assign icon_emoji = '🔧' %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+
+      <!-- 卡片HTML（使用动态变量） -->
+      <article class="post-card post-card-rich {% if post.featured %}post-card-featured-large{% endif %}" style="--index: {{ index }}">
+        <div class="post-card-bar {{ color_class }}"></div>
+        <div class="post-card-content">
+          <div class="post-card-header">
+            <div class="post-card-icon {{ color_class }}">
+              <span style="color: white;">{{ icon_emoji }}</span>
             </div>
+            <div>
+              <h3 class="post-card-title">{{ post.title }}</h3>
+              <time class="post-card-date">{{ post.date | date: "%Y-%m-%d" }}</time>
+            </div>
+          </div>
+          {% if post.tags.size > 0 %}
+          <div class="post-card-tags-rich">
+            {% for tag in post.tags limit:2 %}
+            <span class="tag-colored {{ color_class }}">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <div class="post-card-footer">
+            <span class="post-card-reading-time">📖 预计 {{ post.content | number_of_words | divided_by: 180 }} 分钟</span>
+            {% if post.featured %}
+            <span class="post-card-featured">⭐ 精选</span>
             {% endif %}
           </div>
-        </a>
+        </div>
+        <a href="{{ post.url | relative_url }}" class="post-card-link" style="position: absolute; inset: 0; z-index: 1;"></a>
       </article>
       {% endfor %}
     </div>

@@ -448,6 +448,158 @@ body {
   color: var(--accent-color);
 }
 
+/* === 文章卡片丰富样式 - 视觉升级 === */
+
+/* 文章卡片彩色条 */
+.post-card-bar {
+  height: 4px;
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0;
+}
+
+.post-card-bar.claude-code {
+  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+}
+
+.post-card-bar.case-study {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.post-card-bar.tob-saas {
+  background: linear-gradient(90deg, #10b981, #14b8a6);
+}
+
+.post-card-bar.pitfall {
+  background: #10b981;
+}
+
+/* 精选文章大卡片 - 横跨两列 */
+.post-card-featured-large {
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .post-card-featured-large {
+    grid-column: span 1;
+  }
+}
+
+/* 文章卡片图标区域 */
+.post-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.post-card-icon.claude-code {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.post-card-icon.case-study {
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+}
+
+.post-card-icon.tob-saas {
+  background: linear-gradient(135deg, #10b981, #14b8a6);
+}
+
+.post-card-icon.pitfall {
+  background: #10b981;
+}
+
+/* 文章卡片标签 - 视觉丰富型 */
+.post-card-tags-rich {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.post-card-tags-rich .tag-colored {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.post-card-tags-rich .tag-colored.claude-code {
+  background: rgba(99, 102, 241, 0.15);
+  color: #6366f1;
+}
+
+.post-card-tags-rich .tag-colored.case-study {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.post-card-tags-rich .tag-colored.tob-saas {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+.post-card-tags-rich .tag-colored.pitfall {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+}
+
+/* 文章卡片头部布局 */
+.post-card-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+/* 文章卡片底部信息 */
+.post-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.post-card-reading-time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.post-card-featured {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #f59e0b;
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .post-card-tags-rich .tag-colored.claude-code {
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+}
+
+[data-theme="dark"] .post-card-tags-rich .tag-colored.case-study {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .post-card-tags-rich .tag-colored.tob-saas,
+[data-theme="dark"] .post-card-tags-rich .tag-colored.pitfall {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+}
+
+[data-theme="dark"] .post-card-footer {
+  border-top-color: rgba(255, 255, 255, 0.1);
+}
+
 .section-more {
   text-align: center;
   margin-top: var(--spacing-10);
