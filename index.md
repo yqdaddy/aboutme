@@ -202,3 +202,112 @@ title: 首页
     {% endif %}
   </div>
 </section>
+
+<!-- 核心能力 - UI优化版 -->
+<section class="capabilities-section">
+  <div class="container">
+    <h2 class="section-title">核心能力</h2>
+    <div class="capabilities-grid">
+      <div class="capability-card capability-card-blue">
+        <div class="capability-bar"></div>
+        <div class="capability-icon">🏗️</div>
+        <h3>系统架构</h3>
+        <p>ToB SaaS 平台架构设计，高并发/高可用分布式系统，微服务架构落地</p>
+      </div>
+      <div class="capability-card capability-card-purple">
+        <div class="capability-bar"></div>
+        <div class="capability-icon">🤖</div>
+        <h3>AI 工程化</h3>
+        <p>大模型应用落地，RAG 检索增强生成，企业级 AI 知识库构建</p>
+      </div>
+      <div class="capability-card capability-card-green">
+        <div class="capability-bar"></div>
+        <div class="capability-icon">👥</div>
+        <h3>团队管理</h3>
+        <p>10+ 人技术团队搭建与管理，研发流程规范化，技术与业务深度协同</p>
+      </div>
+      <div class="capability-card capability-card-orange">
+        <div class="capability-bar"></div>
+        <div class="capability-icon">📱</div>
+        <h3>多端开发</h3>
+        <p>后台 / 小程序 / App / H5 多端统一架构，UniApp 跨平台方案</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 项目亮点 - UI优化版 -->
+<section class="highlights-section">
+  <div class="container">
+    <h2 class="section-title">项目亮点</h2>
+    <div class="highlights-grid">
+      <div class="highlight-card highlight-card-blue">
+        <div class="highlight-bar"></div>
+        <div class="highlight-content">
+          <span class="highlight-badge">ToB + ToC</span>
+          <h3>水贝珠宝产业平台</h3>
+          <p>面向深圳水贝 IBC 珠宝产业带，集成实时金价、内容种草、互动玩法、线下商家连接</p>
+        </div>
+      </div>
+      <div class="highlight-card highlight-card-green">
+        <div class="highlight-bar"></div>
+        <div class="highlight-content">
+          <span class="highlight-badge highlight-badge-green">0 → 1</span>
+          <h3>智能货柜售卖系统</h3>
+          <p>完整智能售卖系统闭环：下单/开门/识别/结算/补货，支持规模化铺设</p>
+        </div>
+      </div>
+      <div class="highlight-card highlight-card-purple">
+        <div class="highlight-bar"></div>
+        <div class="highlight-content">
+          <span class="highlight-badge highlight-badge-purple">S2B2C</span>
+          <h3>鲸旦电商平台</h3>
+          <p>微服务架构，支撑百万级用户规模，自动化部署与多端统一开发</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 数据亮点 -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <span class="stat-number">15+</span>
+        <span class="stat-label">年技术经验</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">300万+</span>
+        <span class="stat-label">年服务用户</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">人团队管理</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">6+</span>
+        <span class="stat-label">核心项目交付</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 关于我预览 - UI优化版 -->
+<section class="about-preview">
+  <div class="container">
+    <div class="about-card about-card-rich">
+      <div class="about-bar"></div>
+      <div class="about-content">
+        <h2>关于我</h2>
+        <p>15年+ 互联网行业技术负责人，长期深耕 ToB SaaS、平台型系统、智能货柜与 AI 工程化应用，具备从 0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营的完整闭环经验。</p>
+        <div class="about-strengths">
+          <div class="strength-tag strength-tag-blue">🔧 能下沉一线解决复杂系统与架构问题</div>
+          <div class="strength-tag strength-tag-purple">📈 能自上而下规划技术路线与演进策略</div>
+          <div class="strength-tag strength-tag-green">👥 能带领技术团队稳定交付，支撑业务持续增长</div>
+        </div>
+        <a href="{{ '/about' | relative_url }}" class="btn btn-primary">了解更多</a>
+      </div>
+    </div>
+  </div>
+</section>

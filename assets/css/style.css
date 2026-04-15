@@ -2006,7 +2006,7 @@ body {
 
 /* === 首页核心能力区域 === */
 .capabilities-section {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-20) 0;
   background: var(--bg-color);
 }
 
@@ -2021,19 +2021,104 @@ body {
   border-radius: var(--radius-xl);
   padding: var(--spacing-xl);
   text-align: center;
-  transition: all 0.3s;
-  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, border-color 0.2s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 能力卡片彩色条 */
+.capability-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 12px 12px 0 0;
+}
+
+.capability-card-blue .capability-bar {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.capability-card-purple .capability-bar {
+  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+}
+
+.capability-card-green .capability-bar {
+  background: linear-gradient(90deg, #10b981, #14b8a6);
+}
+
+.capability-card-orange .capability-bar {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
 }
 
 .capability-card:hover {
   border-color: var(--primary-light);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.capability-card:hover .capability-bar {
+  filter: brightness(1.1);
 }
 
 .capability-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: var(--spacing-md);
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 12px;
+  background: var(--bg-color);
+}
+
+/* 彩色图标背景 */
+.capability-card-blue .capability-icon {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+}
+
+.capability-card-purple .capability-icon {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(139, 92, 246, 0.1));
+}
+
+.capability-card-green .capability-icon {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(20, 184, 166, 0.1));
+}
+
+.capability-card-orange .capability-icon {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.1));
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .capability-card {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .capability-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .capability-icon {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .capability-card-blue .capability-icon {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .capability-card-purple .capability-icon {
+  background: rgba(139, 92, 246, 0.2);
+}
+
+[data-theme="dark"] .capability-card-green .capability-icon {
+  background: rgba(20, 184, 166, 0.2);
+}
+
+[data-theme="dark"] .capability-card-orange .capability-icon {
+  background: rgba(245, 158, 11, 0.2);
 }
 
 .capability-card h3 {
@@ -2052,7 +2137,7 @@ body {
 
 /* === 首页项目亮点区域 === */
 .highlights-section {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-20) 0;
   background: var(--bg-secondary);
 }
 
@@ -2066,13 +2151,59 @@ body {
   background: var(--bg-color);
   border-radius: var(--radius-xl);
   padding: var(--spacing-xl);
-  border-left: 4px solid var(--primary-color);
-  transition: all 0.3s;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 项目亮点彩色条 */
+.highlight-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 12px 12px 0 0;
+}
+
+.highlight-card-blue .highlight-bar {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.highlight-card-green .highlight-bar {
+  background: linear-gradient(90deg, #10b981, #14b8a6);
+}
+
+.highlight-card-purple .highlight-bar {
+  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
 }
 
 .highlight-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.highlight-card:hover .highlight-bar {
+  filter: brightness(1.1);
+}
+
+.highlight-content {
+  padding-top: var(--spacing-md);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .highlights-section {
+  background: var(--bg-tertiary);
+}
+
+[data-theme="dark"] .highlight-card {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .highlight-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
 .highlight-badge {
@@ -2084,6 +2215,14 @@ body {
   font-size: 0.8rem;
   font-weight: 600;
   margin-bottom: var(--spacing-md);
+}
+
+.highlight-badge-green {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.highlight-badge-purple {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
 }
 
 .highlight-card h3 {
@@ -2196,34 +2335,88 @@ body {
 
 /* === 首页数据亮点区域 === */
 .stats-section {
-  padding: var(--spacing-3xl) 0;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  padding: var(--spacing-16) 0;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #7c3aed 100%);
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xl);
   text-align: center;
 }
 
 .stat-item {
   color: white;
+  padding: var(--spacing-lg);
+  transition: transform 0.2s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
 }
 
 .stat-number {
   display: block;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.02em;
 }
 
 .stat-label {
   font-size: 0.95rem;
   opacity: 0.9;
+  font-weight: 500;
 }
 
 /* === 关于我预览增强 === */
+.about-preview {
+  padding: var(--spacing-20) 0;
+  background: var(--bg-color);
+}
+
+.about-card {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--border-color);
+}
+
+/* 关于我卡片彩色条 */
+.about-card-rich {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  border-radius: 16px 16px 0 0;
+}
+
+.about-content {
+  padding-top: var(--spacing-md);
+}
+
+.about-card h2 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--spacing-lg);
+}
+
 .about-strengths {
   display: flex;
   flex-direction: column;
@@ -2233,11 +2426,58 @@ body {
 }
 
 .strength-tag {
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   font-size: 0.9rem;
   color: var(--text-secondary);
+  border: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+/* 彩色能力标签 */
+.strength-tag-blue {
+  border-color: rgba(37, 99, 235, 0.3);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.strength-tag-purple {
+  border-color: rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.05);
+}
+
+.strength-tag-green {
+  border-color: rgba(16, 185, 129, 0.3);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.strength-tag:hover {
+  border-color: var(--primary-light);
+}
+
+/* 深色模式适配 */
+[data-theme="dark"] .about-card {
+  background: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .strength-tag {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .strength-tag-blue {
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+[data-theme="dark"] .strength-tag-purple {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.1);
+}
+
+[data-theme="dark"] .strength-tag-green {
+  border-color: rgba(20, 184, 166, 0.4);
+  background: rgba(20, 184, 166, 0.1);
 }
 
 /* === 响应式补充 === */
