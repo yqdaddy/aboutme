@@ -599,20 +599,32 @@ body {
 }
 
 /* 深色模式适配 */
+[data-theme="dark"] .post-card-bar.claude-code {
+  background: linear-gradient(90deg, #4f46e5, #7c3aed, #db2777);
+}
+
+[data-theme="dark"] .post-card-bar.case-study {
+  background: linear-gradient(90deg, #d97706, #dc2626);
+}
+
+[data-theme="dark"] .post-card-bar.tob-saas {
+  background: linear-gradient(90deg, #059669, #0d9488);
+}
+
 [data-theme="dark"] .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(139, 92, 246, 0.2);
-  color: #a78bfa;
+  background: rgba(79, 70, 229, 0.2);
+  color: #a5b4fc;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.case-study {
-  background: rgba(245, 158, 11, 0.2);
-  color: #fbbf24;
+  background: rgba(217, 119, 6, 0.2);
+  color: #fcd34d;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.tob-saas,
 [data-theme="dark"] .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(16, 185, 129, 0.2);
-  color: #34d399;
+  background: rgba(5, 150, 105, 0.2);
+  color: #6ee7b7;
 }
 
 [data-theme="dark"] .post-card-footer {
@@ -2626,6 +2638,74 @@ body {
 
 [data-theme="dark"] ::selection {
   background: rgba(236, 72, 153, 0.4);
+}
+
+/* === 作者卡片深色模式 === */
+[data-theme="dark"] .author-card {
+  background: linear-gradient(135deg, #422006, #78350f);
+}
+
+[data-theme="dark"] .author-avatar {
+  background: #92400e;
+  border-color: #78350f;
+}
+
+[data-theme="dark"] .author-name {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .author-brand {
+  color: #fef3c7;
+}
+
+[data-theme="dark"] .author-intro {
+  color: #fef3c7;
+}
+
+[data-theme="dark"] .author-strength-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fef3c7;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="dark"] .author-stat-number {
+  color: #f1f5f9;
+}
+
+[data-theme="dark"] .author-stat-label {
+  color: #fef3c7;
+}
+
+/* === 时间线深色模式 === */
+[data-theme="dark"] .timeline-section {
+  background: var(--bg-secondary);
+}
+
+[data-theme="dark"] .timeline-svg text {
+  fill: #94a3b8 !important;
+}
+
+[data-theme="dark"] .timeline-svg circle {
+  opacity: 0.9;
+}
+
+/* === 技术栈矩阵深色模式 === */
+[data-theme="dark"] .tech-matrix {
+  background: #0f172a;
+}
+
+/* === 项目缩略卡片深色模式 === */
+[data-theme="dark"] .project-thumbnail {
+  background: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .project-badge {
+  color: var(--accent-color);
+}
+
+[data-theme="dark"] .project-name {
+  color: var(--text-color);
 }
 
 /* === 技术栈矩阵 === */
