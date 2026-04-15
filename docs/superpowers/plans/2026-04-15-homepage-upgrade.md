@@ -207,15 +207,38 @@ Liquid 模板判断逻辑：
 
 - [ ] **步骤 5：修改文章卡片 HTML 结构**
 
-在 `index.md` 的文章循环中，修改卡片结构：
+在 `index.md` 的文章循环中，整合步骤 0 的判断逻辑和卡片结构：
 
-```html
-<article class="post-card post-card-rich">
-  <div class="post-card-bar claude-code"></div>
+```liquid
+{% for post in site.posts limit:6 %}
+{% assign index = forloop.index0 %}
+
+<!-- 步骤0：标签颜色分类判断 -->
+{% assign color_class = 'tob-saas' %}
+{% assign icon_emoji = '🏗️' %}
+{% for tag in post.tags %}
+  {% if tag contains 'Claude' or tag contains 'AI' or tag contains 'RAG' or tag contains 'Agent' or tag contains 'LLM' %}
+    {% assign color_class = 'claude-code' %}
+    {% assign icon_emoji = '🧠' %}
+    {% break %}
+  {% elsif tag contains '实战' or tag contains '案例' or tag contains '0到1' %}
+    {% assign color_class = 'case-study' %}
+    {% assign icon_emoji = '⚡' %}
+    {% break %}
+  {% elsif tag contains '踩坑' or tag contains '避坑' or tag contains '总结' %}
+    {% assign color_class = 'pitfall' %}
+    {% assign icon_emoji = '🔧' %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<!-- 卡片HTML（使用动态变量） -->
+<article class="post-card post-card-rich {% if post.featured %}post-card-featured-large{% endif %}" style="--index: {{ index }}">
+  <div class="post-card-bar {{ color_class }}"></div>
   <div class="post-card-content">
     <div class="post-card-header">
-      <div class="post-card-icon claude-code">
-        <span style="color: white;">🧠</span>
+      <div class="post-card-icon {{ color_class }}">
+        <span style="color: white;">{{ icon_emoji }}</span>
       </div>
       <div>
         <h3 class="post-card-title">{{ post.title }}</h3>
@@ -224,18 +247,19 @@ Liquid 模板判断逻辑：
     </div>
     <div class="post-card-tags-rich">
       {% for tag in post.tags limit:2 %}
-      <span class="tag-colored {{ tag | slugify }}">{{ tag }}</span>
+      <span class="tag-colored {{ color_class }}">{{ tag }}</span>
       {% endfor %}
     </div>
     <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
     <div class="post-card-footer">
-      <span class="post-card-reading-time">📖 预计 8 分钟</span>
+      <span class="post-card-reading-time">📖 预计 {{ post.content | number_of_words | divided_by: 180 }} 分钟</span>
       {% if post.featured %}
       <span class="post-card-featured">⭐ 精选</span>
       {% endif %}
     </div>
   </div>
 </article>
+{% endfor %}
 ```
 
 - [ ] **步骤 6：本地预览验证**
@@ -1195,8 +1219,10 @@ git commit -m "fix: 区块间距调整 - 符合设计规格"
 # 测量 gzip 压缩后大小
 gzip -c assets/css/style.css | wc -c
 
-# 对比增量（假设起始 commit 为 START_SHA）
-git diff START_SHA -- assets/css/style.css | gzip | wc -c
+# 获取本次开发前的起始 commit
+git log --oneline -1 --before="2026-04-15"
+# 或使用相对偏移（如最近10个commit之前）
+git diff HEAD~10 -- assets/css/style.css | gzip | wc -c
 ```
 
 - [ ] **步骤 4：Git 状态检查**
