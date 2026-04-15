@@ -2063,6 +2063,51 @@ body {
   margin: 0;
 }
 
+/* === 首页项目案例缩略卡片 === */
+.project-thumbnails {
+  padding: var(--spacing-xl) 0;
+}
+
+.project-thumbnails-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.project-thumbnails-grid {
+  display: flex;
+  gap: 12px;
+}
+
+.project-thumbnail {
+  flex: 1;
+  background: var(--bg-secondary);
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s;
+  text-decoration: none;
+}
+
+.project-thumbnail:hover {
+  transform: translateY(-2px);
+}
+
+.project-badge {
+  font-size: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
 /* === 首页技术栈区域 === */
 .techstack-section {
   padding: var(--spacing-3xl) 0;
@@ -2172,6 +2217,11 @@ body {
 
   .stat-number {
     font-size: 2rem;
+  }
+
+  /* 项目缩略卡片响应式 */
+  .project-thumbnails-grid {
+    flex-direction: column;
   }
 }
 

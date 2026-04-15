@@ -232,26 +232,23 @@ title: 首页
   </div>
 </section>
 
-<!-- 项目亮点 -->
-<section class="highlights-section">
+<!-- 项目案例缩略 -->
+<section class="project-thumbnails">
   <div class="container">
-    <h2 class="section-title">项目亮点</h2>
-    <div class="highlights-grid">
-      <div class="highlight-card">
-        <span class="highlight-badge">ToB + ToC</span>
-        <h3>水贝珠宝产业平台</h3>
-        <p>面向深圳水贝 IBC 珠宝产业带，集成实时金价、内容种草、互动玩法、线下商家连接</p>
-      </div>
-      <div class="highlight-card">
-        <span class="highlight-badge">0 → 1</span>
-        <h3>智能货柜售卖系统</h3>
-        <p>完整智能售卖系统闭环：下单/开门/识别/结算/补货，支持规模化铺设</p>
-      </div>
-      <div class="highlight-card">
-        <span class="highlight-badge">S2B2C</span>
-        <h3>鲸旦电商平台</h3>
-        <p>微服务架构，支撑百万级用户规模，自动化部署与多端统一开发</p>
-      </div>
+    <div class="project-thumbnails-title">项目案例</div>
+    <div class="project-thumbnails-grid">
+      <a href="{{ '/about' | relative_url }}#水贝珠宝" class="project-thumbnail">
+        <div class="project-badge">ToB + ToC</div>
+        <div class="project-name">水贝珠宝平台</div>
+      </a>
+      <a href="{{ '/about' | relative_url }}#智能货柜" class="project-thumbnail">
+        <div class="project-badge">0 → 1</div>
+        <div class="project-name">智能货柜系统</div>
+      </a>
+      <a href="{{ '/about' | relative_url }}#鲸旦电商" class="project-thumbnail">
+        <div class="project-badge">S2B2C</div>
+        <div class="project-name">鲸旦电商</div>
+      </a>
     </div>
   </div>
 </section>
