@@ -1,30 +1,38 @@
 /* ============================================
    码孖AI 博客主题样式
-   现代、简洁、专业的技术博客风格
+   专业、现代、有温度的技术博客风格
+   配色遵循 Taste Skill 规范
    ============================================ */
 
 /* === 基础变量 === */
 :root {
-  /* 主色调 */
-  --primary-color: #2563eb;
-  --primary-dark: #1d4ed8;
-  --primary-light: #3b82f6;
+  /* 主色调 - 深沉靛蓝，专业科技感 */
+  --primary-color: #1e40af;        /* 靛蓝 800，饱和度 70%，专业内敛 */
+  --primary-dark: #1e3a8a;         /* 悬停态 */
+  --primary-light: #3b82f6;        /* 高亮态 */
+  --primary-muted: #dbeafe;        /* 浅色背景 */
 
-  /* 中性色 */
-  --text-color: #1f2937;
-  --text-secondary: #6b7280;
-  --text-muted: #9ca3af;
+  /* 中性色 - Slate 系列，有温度感 */
+  --text-color: #0f172a;           /* Slate 900 - 标题 */
+  --text-secondary: #475569;       /* Slate 600 - 正文 */
+  --text-muted: #64748b;           /* Slate 500 - 辅助文字 */
   --bg-color: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-tertiary: #f3f4f6;
-  --border-color: #e5e7eb;
+  --bg-secondary: #f8fafc;         /* Slate 50 - 卡片背景 */
+  --bg-tertiary: #f1f5f9;          /* Slate 100 - 区块背景 */
+  --border-color: #e2e8f0;         /* Slate 200 */
 
-  /* 强调色 */
-  --accent-color: #EC4899;
-  --accent-green: #10b981;
-  --accent-orange: #f59e0b;
-  --accent-purple: #8b5cf6;
-  --accent-red: #ef4444;
+  /* 单一强调色 - 用于 CTA 和高亮 */
+  --accent-color: #1e40af;         /* 与主色一致，保持统一 */
+
+  /* 功能色 - 仅用于状态，不用于装饰 */
+  --color-success: #059669;        /* Emerald 600 */
+  --color-warning: #d97706;        /* Amber 600 */
+  --color-error: #dc2626;          /* Red 600 */
+
+  /* 卡片彩色条 - 品牌蓝渐变 */
+  --gradient-primary: linear-gradient(90deg, #1e40af, #3b82f6, #6366f1);
+  --gradient-success: linear-gradient(90deg, #059669, #10b981);
+  --gradient-accent: linear-gradient(90deg, #6366f1, #8b5cf6);
 
   /* 字体比例系统 - Modular Scale */
   --text-xs: 0.75rem;    /* 12px */
@@ -111,20 +119,41 @@
   --transition-slow: var(--duration-slow) var(--ease-in-out);
 }
 
-/* === 深色模式 === */
+/* === 深色模式 - 保持品牌识别度 === */
 [data-theme="dark"] {
-  --text-color: #FAFAFA;
-  --text-secondary: #A1A1AA;
-  --text-muted: #71717A;
-  --bg-color: #09090B;
-  --bg-secondary: #18181B;
-  --bg-tertiary: #27272A;
-  --border-color: #27272A;
+  /* 主色在深色模式下提亮，保持可识别 */
+  --primary-color: #60a5fa;        /* Blue 400 - 可点击元素 */
+  --primary-dark: #3b82f6;         /* Blue 500 - 悬停态 */
+  --primary-light: #93c5fd;        /* Blue 300 - 高亮态 */
+  --primary-muted: #1e3a5f;        /* 深色背景 */
 
+  /* 中性色 - 深色 Slate */
+  --text-color: #f1f5f9;           /* Slate 100 - 标题 */
+  --text-secondary: #94a3b8;       /* Slate 400 - 正文 */
+  --text-muted: #64748b;           /* Slate 500 - 辅助文字 */
+  --bg-color: #0f172a;             /* Slate 900 - 主背景 */
+  --bg-secondary: #1e293b;         /* Slate 800 - 卡片背景 */
+  --bg-tertiary: #334155;          /* Slate 700 - 区块背景 */
+  --border-color: #334155;         /* Slate 700 */
+
+  /* 强调色在深色模式下 */
+  --accent-color: #60a5fa;
+
+  /* 功能色 - 深色模式适配 */
+  --color-success: #34d399;        /* Emerald 400 */
+  --color-warning: #fbbf24;        /* Amber 400 */
+  --color-error: #f87171;          /* Red 400 */
+
+  /* 阴影 - 深色模式 */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
-  --shadow-glow: 0 0 40px rgba(236, 72, 153, 0.35);
+  --shadow-glow: 0 0 40px rgba(96, 165, 250, 0.15);
+
+  /* 渐变 - 深色模式 */
+  --gradient-primary: linear-gradient(90deg, #3b82f6, #60a5fa, #818cf8);
+  --gradient-success: linear-gradient(90deg, #059669, #34d399);
+  --gradient-accent: linear-gradient(90deg, #6366f1, #a78bfa);
 }
 
 /* === 基础重置 === */
@@ -461,7 +490,7 @@ body {
 
 /* === 文章卡片丰富样式 - 视觉升级 === */
 
-/* 文章卡片彩色条 */
+/* 文章卡片彩色条 - 统一品牌蓝 */
 .post-card-bar {
   height: 4px;
   border-radius: 16px 16px 0 0;
@@ -470,19 +499,19 @@ body {
 }
 
 .post-card-bar.claude-code {
-  background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #818cf8);
 }
 
 .post-card-bar.case-study {
-  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  background: linear-gradient(90deg, #0369a1, #0284c7, #0ea5e9);
 }
 
 .post-card-bar.tob-saas {
-  background: linear-gradient(90deg, #10b981, #14b8a6);
+  background: linear-gradient(90deg, #1e40af, #2563eb, #3b82f6);
 }
 
 .post-card-bar.pitfall {
-  background: #10b981;
+  background: linear-gradient(90deg, #059669, #10b981);
 }
 
 /* 精选文章大卡片 - 横跨两列 */
@@ -509,22 +538,22 @@ body {
 }
 
 .post-card-icon.claude-code {
-  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
 }
 
 .post-card-icon.case-study {
-  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  background: linear-gradient(135deg, #0369a1, #0284c7);
 }
 
 .post-card-icon.tob-saas {
-  background: linear-gradient(135deg, #10b981, #14b8a6);
+  background: linear-gradient(135deg, #1e40af, #2563eb);
 }
 
 .post-card-icon.pitfall {
-  background: #10b981;
+  background: linear-gradient(135deg, #059669, #10b981);
 }
 
-/* 文章卡片标签 - 视觉丰富型 */
+/* 文章卡片标签 - 统一品牌色系 */
 .post-card-tags-rich {
   display: flex;
   gap: 8px;
@@ -540,27 +569,27 @@ body {
 }
 
 .post-card-tags-rich .tag-colored:hover {
-  filter: brightness(1.1);
+  filter: brightness(1.05);
 }
 
 .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(99, 102, 241, 0.12);
-  color: #6366f1;
+  background: rgba(79, 70, 229, 0.1);
+  color: #4f46e5;
 }
 
 .post-card-tags-rich .tag-colored.case-study {
-  background: rgba(245, 158, 11, 0.12);
-  color: #b45309;
+  background: rgba(3, 105, 161, 0.1);
+  color: #0369a1;
 }
 
 .post-card-tags-rich .tag-colored.tob-saas {
-  background: rgba(16, 185, 129, 0.12);
-  color: #047857;
+  background: rgba(30, 64, 175, 0.1);
+  color: #1e40af;
 }
 
 .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(16, 185, 129, 0.12);
-  color: #047857;
+  background: rgba(5, 150, 105, 0.1);
+  color: #059669;
 }
 
 /* 文章卡片头部布局 */
@@ -2166,7 +2195,7 @@ body {
   overflow: hidden;
 }
 
-/* 能力卡片彩色条 */
+/* 能力卡片彩色条 - 统一品牌蓝 */
 .capability-bar {
   position: absolute;
   top: 0;
@@ -2177,19 +2206,19 @@ body {
 }
 
 .capability-card-blue .capability-bar {
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
 }
 
 .capability-card-purple .capability-bar {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
 }
 
 .capability-card-green .capability-bar {
-  background: linear-gradient(90deg, #10b981, #14b8a6);
+  background: linear-gradient(90deg, #059669, #10b981);
 }
 
 .capability-card-orange .capability-bar {
-  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  background: linear-gradient(90deg, #0369a1, #0284c7);
 }
 
 .capability-card:hover {
@@ -2218,25 +2247,25 @@ body {
   transform: scale(1.05);
 }
 
-/* 彩色图标背景 */
+/* 彩色图标背景 - 统一品牌色系 */
 .capability-card-blue .capability-icon {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(59, 130, 246, 0.08));
-  color: #2563eb;
+  background: linear-gradient(135deg, rgba(30, 64, 175, 0.1), rgba(59, 130, 246, 0.08));
+  color: #1e40af;
 }
 
 .capability-card-purple .capability-icon {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.08));
-  color: #7c3aed;
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(99, 102, 241, 0.08));
+  color: #4f46e5;
 }
 
 .capability-card-green .capability-icon {
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(20, 184, 166, 0.08));
-  color: #10b981;
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(16, 185, 129, 0.08));
+  color: #059669;
 }
 
 .capability-card-orange .capability-icon {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(239, 68, 68, 0.08));
-  color: #f59e0b;
+  background: linear-gradient(135deg, rgba(3, 105, 161, 0.1), rgba(2, 132, 199, 0.08));
+  color: #0369a1;
 }
 
 .capability-icon svg {
@@ -2329,7 +2358,7 @@ body {
   overflow: hidden;
 }
 
-/* 项目亮点彩色条 */
+/* 项目亮点彩色条 - 统一品牌蓝 */
 .highlight-bar {
   position: absolute;
   top: 0;
@@ -2340,15 +2369,15 @@ body {
 }
 
 .highlight-card-blue .highlight-bar {
-  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
 }
 
 .highlight-card-green .highlight-bar {
-  background: linear-gradient(90deg, #10b981, #14b8a6);
+  background: linear-gradient(90deg, #059669, #10b981);
 }
 
 .highlight-card-purple .highlight-bar {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(90deg, #4f46e5, #6366f1);
 }
 
 .highlight-card:hover {
@@ -2496,7 +2525,7 @@ body {
 /* === 首页数据亮点区域 === */
 .stats-section {
   padding: var(--spacing-16) 0;
-  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #7c3aed 100%);
+  background: linear-gradient(135deg, #1e40af 0%, #2563eb 50%, #4f46e5 100%);
 }
 
 .stats-grid {
@@ -2556,7 +2585,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #2563eb, #7c3aed, #ec4899);
+  background: linear-gradient(90deg, #1e40af, #4f46e5, #059669);
   border-radius: 16px 16px 0 0;
 }
 
@@ -2609,32 +2638,32 @@ body {
   margin-right: var(--spacing-3);
 }
 
-/* 彩色能力标签 */
+/* 彩色能力标签 - 统一品牌色系 */
 .strength-tag-blue {
-  border-color: rgba(37, 99, 235, 0.2);
-  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(30, 64, 175, 0.2);
+  background: rgba(30, 64, 175, 0.05);
 }
 
 .strength-tag-blue:hover {
-  border-color: rgba(37, 99, 235, 0.4);
+  border-color: rgba(30, 64, 175, 0.4);
 }
 
 .strength-tag-purple {
-  border-color: rgba(124, 58, 237, 0.2);
-  background: rgba(124, 58, 237, 0.05);
+  border-color: rgba(79, 70, 229, 0.2);
+  background: rgba(79, 70, 229, 0.05);
 }
 
 .strength-tag-purple:hover {
-  border-color: rgba(124, 58, 237, 0.4);
+  border-color: rgba(79, 70, 229, 0.4);
 }
 
 .strength-tag-green {
-  border-color: rgba(16, 185, 129, 0.2);
-  background: rgba(16, 185, 129, 0.05);
+  border-color: rgba(5, 150, 105, 0.2);
+  background: rgba(5, 150, 105, 0.05);
 }
 
 .strength-tag-green:hover {
-  border-color: rgba(16, 185, 129, 0.4);
+  border-color: rgba(5, 150, 105, 0.4);
 }
 
 /* 深色模式适配 */
@@ -3010,21 +3039,21 @@ body {
 }
 
 [data-theme="dark"] .hero-feature-card .feature-icon {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .feature-icon.feature-icon-purple {
-  background: rgba(139, 92, 246, 0.15);
-  color: #a78bfa;
+  background: rgba(129, 140, 248, 0.15);
+  color: #818cf8;
 }
 
 [data-theme="dark"] .feature-icon.feature-icon-yellow {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
 }
 
 [data-theme="dark"] .feature-icon.feature-icon-blue {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(96, 165, 250, 0.15);
   color: #60a5fa;
 }
 
@@ -3039,35 +3068,35 @@ body {
 }
 
 [data-theme="dark"] .post-card:hover {
-  border-color: var(--accent-color);
+  border-color: var(--primary-color);
   box-shadow: var(--shadow-lg), var(--shadow-glow);
 }
 
 [data-theme="dark"] .post-card-bar.claude-code {
-  background: linear-gradient(90deg, #4f46e5, #7c3aed, #db2777);
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #818cf8);
 }
 
 [data-theme="dark"] .post-card-bar.case-study {
-  background: linear-gradient(90deg, #d97706, #dc2626);
+  background: linear-gradient(90deg, #0284c7, #0ea5e9, #38bdf8);
 }
 
 [data-theme="dark"] .post-card-bar.tob-saas {
-  background: linear-gradient(90deg, #059669, #0d9488);
+  background: linear-gradient(90deg, #1e40af, #2563eb, #3b82f6);
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(79, 70, 229, 0.2);
+  background: rgba(129, 140, 248, 0.15);
   color: #a5b4fc;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.case-study {
-  background: rgba(217, 119, 6, 0.2);
-  color: #fcd34d;
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.tob-saas,
 [data-theme="dark"] .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(5, 150, 105, 0.2);
+  background: rgba(52, 211, 153, 0.15);
   color: #6ee7b7;
 }
 
@@ -3091,27 +3120,27 @@ body {
 }
 
 [data-theme="dark"] .capability-icon {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .capability-card-blue .capability-icon {
-  background: rgba(59, 130, 246, 0.15);
+  background: rgba(96, 165, 250, 0.15);
   color: #60a5fa;
 }
 
 [data-theme="dark"] .capability-card-purple .capability-icon {
-  background: rgba(139, 92, 246, 0.15);
-  color: #a78bfa;
+  background: rgba(129, 140, 248, 0.15);
+  color: #818cf8;
 }
 
 [data-theme="dark"] .capability-card-green .capability-icon {
-  background: rgba(20, 184, 166, 0.15);
+  background: rgba(52, 211, 153, 0.15);
   color: #34d399;
 }
 
 [data-theme="dark"] .capability-card-orange .capability-icon {
-  background: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
 }
 
 /* 项目亮点深色模式 */
@@ -3140,33 +3169,33 @@ body {
 }
 
 [data-theme="dark"] .strength-tag {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(96, 165, 250, 0.05);
 }
 
 [data-theme="dark"] .strength-tag-blue {
-  border-color: rgba(59, 130, 246, 0.3);
-  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(96, 165, 250, 0.3);
+  background: rgba(96, 165, 250, 0.1);
 }
 
 [data-theme="dark"] .strength-tag-purple {
-  border-color: rgba(139, 92, 246, 0.3);
-  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(129, 140, 248, 0.3);
+  background: rgba(129, 140, 248, 0.1);
 }
 
 [data-theme="dark"] .strength-tag-green {
-  border-color: rgba(20, 184, 166, 0.3);
-  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(52, 211, 153, 0.3);
+  background: rgba(52, 211, 153, 0.1);
 }
 
 /* 其他元素深色模式 */
 [data-theme="dark"] .tag-small {
-  background: rgba(236, 72, 153, 0.15);
-  color: var(--accent-color);
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--primary-color);
 }
 
 [data-theme="dark"] .tag {
-  background: rgba(236, 72, 153, 0.15);
-  color: var(--accent-color);
+  background: rgba(96, 165, 250, 0.15);
+  color: var(--primary-color);
 }
 
 [data-theme="dark"] .post-content pre {
@@ -3182,13 +3211,13 @@ body {
 
 [data-theme="dark"] .capability-card:hover,
 [data-theme="dark"] .highlight-card:hover {
-  border-color: var(--accent-color);
+  border-color: var(--primary-color);
   box-shadow: var(--shadow-glow);
 }
 
 [data-theme="dark"] .tech-tags span:hover {
-  border-color: var(--accent-color);
-  color: var(--accent-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 /* === 主题切换按钮 === */
