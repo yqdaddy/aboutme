@@ -118,17 +118,23 @@ title: 首页
   <div class="container">
     <div class="hero-features-grid">
       <div class="hero-feature-card">
-        <div class="feature-icon">🤖</div>
+        <div class="feature-icon feature-icon-purple" aria-label="AI 工程化图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2Z"/></svg>
+        </div>
         <h3>AI 工程化</h3>
         <p>从 Prompt 到系统级落地</p>
       </div>
       <div class="hero-feature-card">
-        <div class="feature-icon">⚡</div>
+        <div class="feature-icon feature-icon-yellow" aria-label="自动化图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
         <h3>Claude Code / Agent</h3>
         <p>自动化真实生产环境</p>
       </div>
       <div class="hero-feature-card">
-        <div class="feature-icon">🏗️</div>
+        <div class="feature-icon feature-icon-blue" aria-label="系统架构图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        </div>
         <h3>ToB 系统架构</h3>
         <p>SaaS + 硬件 + 数据闭环</p>
       </div>
@@ -146,30 +152,38 @@ title: 首页
 
       <!-- 标签颜色分类判断 -->
       {% assign color_class = 'tob-saas' %}
-      {% assign icon_emoji = '🏗️' %}
+      {% assign icon_name = 'building-2' %}
       {% for tag in post.tags %}
         {% if tag contains 'Claude' or tag contains 'AI' or tag contains 'RAG' or tag contains 'Agent' or tag contains 'LLM' %}
           {% assign color_class = 'claude-code' %}
-          {% assign icon_emoji = '🧠' %}
+          {% assign icon_name = 'brain' %}
           {% break %}
         {% elsif tag contains '实战' or tag contains '案例' or tag contains '0到1' %}
           {% assign color_class = 'case-study' %}
-          {% assign icon_emoji = '⚡' %}
+          {% assign icon_name = 'zap' %}
           {% break %}
         {% elsif tag contains '踩坑' or tag contains '避坑' or tag contains '总结' %}
           {% assign color_class = 'pitfall' %}
-          {% assign icon_emoji = '🔧' %}
+          {% assign icon_name = 'code-2' %}
           {% break %}
         {% endif %}
       {% endfor %}
 
-      <!-- 卡片HTML（使用动态变量） -->
+      <!-- 卡片HTML（使用动态变量，SVG图标代替emoji） -->
       <article class="post-card post-card-rich {% if post.featured %}post-card-featured-large{% endif %}" style="--index: {{ index }}">
         <div class="post-card-bar {{ color_class }}"></div>
         <div class="post-card-content">
           <div class="post-card-header">
-            <div class="post-card-icon {{ color_class }}">
-              <span style="color: white;">{{ icon_emoji }}</span>
+            <div class="post-card-icon {{ color_class }}" aria-label="{{ post.tags.first | default: '文章' }}图标">
+              {% if icon_name == 'brain' %}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2Z"/></svg>
+              {% elsif icon_name == 'zap' %}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              {% elsif icon_name == 'code-2' %}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              {% else %}
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+              {% endif %}
             </div>
             <div>
               <h3 class="post-card-title">{{ post.title }}</h3>
@@ -185,9 +199,15 @@ title: 首页
           {% endif %}
           <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
           <div class="post-card-footer">
-            <span class="post-card-reading-time">📖 预计 {{ post.content | number_of_words | divided_by: 180 }} 分钟</span>
+            <span class="post-card-reading-time">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              预计 {{ post.content | number_of_words | divided_by: 180 }} 分钟
+            </span>
             {% if post.featured %}
-            <span class="post-card-featured">⭐ 精选</span>
+            <span class="post-card-featured">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+              精选
+            </span>
             {% endif %}
           </div>
         </div>
@@ -210,25 +230,33 @@ title: 首页
     <div class="capabilities-grid">
       <div class="capability-card capability-card-blue">
         <div class="capability-bar"></div>
-        <div class="capability-icon">🏗️</div>
+        <div class="capability-icon" aria-label="系统架构图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+        </div>
         <h3>系统架构</h3>
         <p>ToB SaaS 平台架构设计，高并发/高可用分布式系统，微服务架构落地</p>
       </div>
       <div class="capability-card capability-card-purple">
         <div class="capability-bar"></div>
-        <div class="capability-icon">🤖</div>
+        <div class="capability-icon" aria-label="AI 工程化图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2Z"/></svg>
+        </div>
         <h3>AI 工程化</h3>
         <p>大模型应用落地，RAG 检索增强生成，企业级 AI 知识库构建</p>
       </div>
       <div class="capability-card capability-card-green">
         <div class="capability-bar"></div>
-        <div class="capability-icon">👥</div>
+        <div class="capability-icon" aria-label="团队管理图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
         <h3>团队管理</h3>
         <p>10+ 人技术团队搭建与管理，研发流程规范化，技术与业务深度协同</p>
       </div>
       <div class="capability-card capability-card-orange">
         <div class="capability-bar"></div>
-        <div class="capability-icon">📱</div>
+        <div class="capability-icon" aria-label="多端开发图标">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+        </div>
         <h3>多端开发</h3>
         <p>后台 / 小程序 / App / H5 多端统一架构，UniApp 跨平台方案</p>
       </div>
@@ -302,9 +330,18 @@ title: 首页
         <h2>关于我</h2>
         <p>15年+ 互联网行业技术负责人，长期深耕 ToB SaaS、平台型系统、智能货柜与 AI 工程化应用，具备从 0 到 1 架构设计 → 技术选型 → 系统落地 → 规模化运营的完整闭环经验。</p>
         <div class="about-strengths">
-          <div class="strength-tag strength-tag-blue">🔧 能下沉一线解决复杂系统与架构问题</div>
-          <div class="strength-tag strength-tag-purple">📈 能自上而下规划技术路线与演进策略</div>
-          <div class="strength-tag strength-tag-green">👥 能带领技术团队稳定交付，支撑业务持续增长</div>
+          <div class="strength-tag strength-tag-blue">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            能下沉一线解决复杂系统与架构问题
+          </div>
+          <div class="strength-tag strength-tag-purple">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+            能自上而下规划技术路线与演进策略
+          </div>
+          <div class="strength-tag strength-tag-green">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            能带领技术团队稳定交付，支撑业务持续增长
+          </div>
         </div>
         <a href="{{ '/about' | relative_url }}" class="btn btn-primary">了解更多</a>
       </div>

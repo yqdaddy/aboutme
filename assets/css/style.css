@@ -591,11 +591,19 @@ body {
   gap: 4px;
 }
 
+.post-card-reading-time svg {
+  flex-shrink: 0;
+}
+
 .post-card-featured {
   display: flex;
   align-items: center;
   gap: 4px;
   color: #f59e0b;
+}
+
+.post-card-featured svg {
+  flex-shrink: 0;
 }
 
 /* 深色模式适配 */
@@ -2064,31 +2072,40 @@ body {
 }
 
 .capability-icon {
-  font-size: 2rem;
-  margin-bottom: var(--spacing-md);
-  display: inline-block;
   width: 48px;
   height: 48px;
-  line-height: 48px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 12px;
-  background: var(--bg-color);
+  color: var(--text-color);
 }
 
 /* 彩色图标背景 */
 .capability-card-blue .capability-icon {
   background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+  color: #2563eb;
 }
 
 .capability-card-purple .capability-icon {
   background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(139, 92, 246, 0.1));
+  color: #7c3aed;
 }
 
 .capability-card-green .capability-icon {
   background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(20, 184, 166, 0.1));
+  color: #10b981;
 }
 
 .capability-card-orange .capability-icon {
   background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.1));
+  color: #f59e0b;
+}
+
+.capability-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* 深色模式适配 */
@@ -2107,18 +2124,22 @@ body {
 
 [data-theme="dark"] .capability-card-blue .capability-icon {
   background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
 }
 
 [data-theme="dark"] .capability-card-purple .capability-icon {
   background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
 }
 
 [data-theme="dark"] .capability-card-green .capability-icon {
   background: rgba(20, 184, 166, 0.2);
+  color: #34d399;
 }
 
 [data-theme="dark"] .capability-card-orange .capability-icon {
   background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
 }
 
 .capability-card h3 {
@@ -2426,6 +2447,8 @@ body {
 }
 
 .strength-tag {
+  display: flex;
+  align-items: center;
   background: var(--bg-tertiary);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
@@ -2433,6 +2456,10 @@ body {
   color: var(--text-secondary);
   border: 1px solid transparent;
   transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.strength-tag svg {
+  flex-shrink: 0;
 }
 
 /* 彩色能力标签 */
@@ -2642,9 +2669,57 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+/* 特性卡片图标 - SVG 图标样式 */
 .hero-feature-card .feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--spacing-md);
+  width: 48px;
+  height: 48px;
+  margin: 0 auto var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--bg-color);
+}
+
+/* 图标颜色主题 */
+.feature-icon.feature-icon-purple {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(139, 92, 246, 0.1));
+  color: #8b5cf6;
+}
+
+.feature-icon.feature-icon-yellow {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15), rgba(239, 68, 68, 0.1));
+  color: #f59e0b;
+}
+
+.feature-icon.feature-icon-blue {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(59, 130, 246, 0.1));
+  color: #2563eb;
+}
+
+.feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* 深色模式图标 */
+[data-theme="dark"] .hero-feature-card .feature-icon {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .feature-icon.feature-icon-purple {
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+}
+
+[data-theme="dark"] .feature-icon.feature-icon-yellow {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+[data-theme="dark"] .feature-icon.feature-icon-blue {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
 }
 
 .hero-feature-card h3 {
