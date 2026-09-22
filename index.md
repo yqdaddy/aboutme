@@ -37,16 +37,16 @@ title: 首页
             <!-- 背景渐变圆 -->
             <defs>
               <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.1" />
+                <stop offset="0%" style="stop-color:#78350f;stop-opacity:0.1" />
                 <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.15" />
               </linearGradient>
               <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#2563eb" />
-                <stop offset="100%" style="stop-color:#7c3aed" />
+                <stop offset="0%" style="stop-color:#b45309" />
+                <stop offset="100%" style="stop-color:#d97706" />
               </linearGradient>
               <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.6" />
-                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.6" />
+                <stop offset="0%" style="stop-color:#b45309;stop-opacity:0.6" />
+                <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.6" />
               </linearGradient>
             </defs>
 
@@ -70,7 +70,7 @@ title: 首页
 
             <!-- 周围节点 -->
             <!-- RAG -->
-            <circle cx="120" cy="100" r="28" fill="#1d4ed8" opacity="0.85"/>
+            <circle cx="120" cy="100" r="28" fill="#b45309" opacity="0.85"/>
             <text x="120" y="104" text-anchor="middle" fill="white" font-size="11" font-weight="500">RAG</text>
 
             <!-- LLM -->
@@ -94,7 +94,7 @@ title: 首页
             <text x="320" y="324" text-anchor="middle" fill="white" font-size="11" font-weight="500">API</text>
 
             <!-- 数据流动画点 -->
-            <circle r="4" fill="#60a5fa">
+            <circle r="4" fill="#fbbf24">
               <animateMotion dur="3s" repeatCount="indefinite" path="M250,200 L120,100"/>
             </circle>
             <circle r="4" fill="#a78bfa">
