@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Claude Code 说自己能"自愈"了——我跑了一个周末，发现比我想的靠谱"
+title: "Claude Code 说自己能\"自愈\"了——我跑了一个周末，发现比我想的靠谱"
 date: 2026-05-29
 categories: [AI]
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "CLI-Anything 爆火：40.4k Stars 背后，Agent 开发终于告别"造轮子""
+title: "CLI-Anything 爆火：40.4k Stars 背后，Agent 开发终于告别\"造轮子\""
 date: 2026-05-26
 categories: [AI]
 ---
