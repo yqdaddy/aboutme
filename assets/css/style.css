@@ -25,14 +25,17 @@
   --accent-color: #b45309;         /* 与主色一致，保持统一 */
 
   /* 功能色 - 仅用于状态，不用于装饰 */
-  --color-success: #b45309;        /* 使用主色系 */
+  --color-success: #047857;        /* Emerald 700 - 保留用于成功状态 */
   --color-warning: #d97706;        /* Amber 600 */
   --color-error: #b91c1c;          /* Red 700 */
 
-  /* 渐变 - 统一暖色系 */
+  /* 渐变 - 统一琥珀色系 */
   --gradient-primary: linear-gradient(90deg, #b45309, #d97706, #f59e0b);
   --gradient-secondary: linear-gradient(90deg, #92400e, #b45309);
   --gradient-accent: linear-gradient(90deg, #d97706, #f59e0b);
+  --gradient-ai: linear-gradient(90deg, #78350f, #92400e);        /* AI类 - 深琥珀 */
+  --gradient-saas: linear-gradient(90deg, #b45309, #d97706);      /* SaaS类 - 主琥珀 */
+  --gradient-case: linear-gradient(90deg, #d97706, #f59e0b);      /* 案例类 - 亮琥珀 */
 
   /* 字体比例系统 - Modular Scale */
   --text-xs: 0.75rem;    /* 12px */
@@ -2226,7 +2229,7 @@ body {
 }
 
 .job-tags span {
-  background: rgba(37, 99, 235, 0.1);
+  background: rgba(180, 83, 9, 0.1);
   color: var(--primary-color);
   padding: 0.2rem 0.5rem;
   border-radius: var(--radius-sm);
@@ -3186,7 +3189,7 @@ body {
   margin-right: var(--spacing-3);
 }
 
-/* 彩色能力标签 - 暖色系统一 */
+/* 彩色能力标签 - 统一琥珀色系 */
 .strength-tag-blue {
   border-color: rgba(180, 83, 9, 0.2);
   background: rgba(180, 83, 9, 0.05);
@@ -3197,21 +3200,21 @@ body {
 }
 
 .strength-tag-purple {
-  border-color: rgba(124, 58, 237, 0.2);
-  background: rgba(124, 58, 237, 0.05);
+  border-color: rgba(146, 64, 14, 0.2);
+  background: rgba(146, 64, 14, 0.05);
 }
 
 .strength-tag-purple:hover {
-  border-color: rgba(124, 58, 237, 0.4);
+  border-color: rgba(146, 64, 14, 0.4);
 }
 
 .strength-tag-green {
-  border-color: rgba(4, 120, 87, 0.2);
-  background: rgba(4, 120, 87, 0.05);
+  border-color: rgba(120, 53, 15, 0.2);
+  background: rgba(120, 53, 15, 0.05);
 }
 
 .strength-tag-green:hover {
-  border-color: rgba(4, 120, 87, 0.4);
+  border-color: rgba(120, 53, 15, 0.4);
 }
 
 /* 深色模式适配 */
@@ -3225,18 +3228,18 @@ body {
 }
 
 [data-theme="dark"] .strength-tag-blue {
-  border-color: rgba(59, 130, 246, 0.4);
-  background: rgba(59, 130, 246, 0.1);
+  border-color: rgba(251, 191, 36, 0.4);
+  background: rgba(251, 191, 36, 0.1);
 }
 
 [data-theme="dark"] .strength-tag-purple {
-  border-color: rgba(139, 92, 246, 0.4);
-  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(251, 146, 60, 0.4);
+  background: rgba(251, 146, 60, 0.1);
 }
 
 [data-theme="dark"] .strength-tag-green {
-  border-color: rgba(20, 184, 166, 0.4);
-  background: rgba(20, 184, 166, 0.1);
+  border-color: rgba(252, 211, 77, 0.4);
+  background: rgba(252, 211, 77, 0.1);
 }
 
 /* === 响应式补充 === */

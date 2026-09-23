@@ -38,7 +38,7 @@ title: 首页
             <defs>
               <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:#78350f;stop-opacity:0.1" />
-                <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.15" />
+                <stop offset="100%" style="stop-color:#b45309;stop-opacity:0.15" />
               </linearGradient>
               <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:#b45309" />
