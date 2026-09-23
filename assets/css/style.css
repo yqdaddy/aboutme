@@ -4456,3 +4456,40 @@ body {
 .about-preview {
   padding-top: var(--spacing-16);
 }
+
+/* === 分页样式 === */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-12);
+  padding: var(--spacing-6) 0;
+}
+
+.pagination-prev,
+.pagination-next {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-color);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.pagination-prev:hover,
+.pagination-next:hover {
+  background: var(--primary-muted);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.pagination-info {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
