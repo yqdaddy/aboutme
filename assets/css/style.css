@@ -25,14 +25,14 @@
   --accent-color: #b45309;         /* 与主色一致，保持统一 */
 
   /* 功能色 - 仅用于状态，不用于装饰 */
-  --color-success: #047857;        /* Emerald 700 */
-  --color-warning: #b45309;        /* Amber 700 */
+  --color-success: #b45309;        /* 使用主色系 */
+  --color-warning: #d97706;        /* Amber 600 */
   --color-error: #b91c1c;          /* Red 700 */
 
-  /* 卡片彩色条 - 暖色渐变 */
+  /* 渐变 - 统一暖色系 */
   --gradient-primary: linear-gradient(90deg, #b45309, #d97706, #f59e0b);
-  --gradient-success: linear-gradient(90deg, #047857, #059669);
-  --gradient-accent: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  --gradient-secondary: linear-gradient(90deg, #92400e, #b45309);
+  --gradient-accent: linear-gradient(90deg, #d97706, #f59e0b);
 
   /* 字体比例系统 - Modular Scale */
   --text-xs: 0.75rem;    /* 12px */
@@ -140,20 +140,20 @@
   --accent-color: #fbbf24;
 
   /* 功能色 - 深色模式适配 */
-  --color-success: #34d399;        /* Emerald 400 */
-  --color-warning: #fbbf24;        /* Amber 400 */
+  --color-success: #fbbf24;        /* Amber 400 */
+  --color-warning: #fcd34d;        /* Amber 300 */
   --color-error: #fca5a5;          /* Red 400 */
+
+  /* 渐变 - 深色模式统一暖色 */
+  --gradient-primary: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24);
+  --gradient-secondary: linear-gradient(90deg, #b45309, #d97706);
+  --gradient-accent: linear-gradient(90deg, #f59e0b, #fbbf24);
 
   /* 阴影 - 深色模式 */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.3);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.4);
   --shadow-glow: 0 0 40px rgba(251, 191, 36, 0.15);
-
-  /* 渐变 - 深色模式 */
-  --gradient-primary: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24);
-  --gradient-success: linear-gradient(90deg, #047857, #34d399);
-  --gradient-accent: linear-gradient(90deg, #7c3aed, #a78bfa);
 }
 
 /* === 基础重置 === */
@@ -499,7 +499,7 @@ body {
 }
 
 .post-card-bar.claude-code {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6, #a78bfa);
+  background: linear-gradient(90deg, #92400e, #b45309, #d97706);
 }
 
 .post-card-bar.case-study {
@@ -507,11 +507,11 @@ body {
 }
 
 .post-card-bar.tob-saas {
-  background: linear-gradient(90deg, #047857, #059669, #10b981);
+  background: linear-gradient(90deg, #78350f, #92400e, #b45309);
 }
 
 .post-card-bar.pitfall {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(90deg, #b45309, #d97706);
 }
 
 /* 精选文章大卡片 - 横跨两列 */
@@ -538,7 +538,7 @@ body {
 }
 
 .post-card-icon.claude-code {
-  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(135deg, #92400e, #b45309);
 }
 
 .post-card-icon.case-study {
@@ -546,11 +546,11 @@ body {
 }
 
 .post-card-icon.tob-saas {
-  background: linear-gradient(135deg, #047857, #059669);
+  background: linear-gradient(135deg, #78350f, #92400e);
 }
 
 .post-card-icon.pitfall {
-  background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(135deg, #b45309, #d97706);
 }
 
 /* 文章卡片标签 - 暖色系统一 */
@@ -573,8 +573,8 @@ body {
 }
 
 .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(124, 58, 237, 0.1);
-  color: #7c3aed;
+  background: rgba(180, 83, 9, 0.1);
+  color: #92400e;
 }
 
 .post-card-tags-rich .tag-colored.case-study {
@@ -583,13 +583,13 @@ body {
 }
 
 .post-card-tags-rich .tag-colored.tob-saas {
-  background: rgba(4, 120, 87, 0.1);
-  color: #047857;
+  background: rgba(146, 64, 14, 0.1);
+  color: #78350f;
 }
 
 .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(124, 58, 237, 0.1);
-  color: #7c3aed;
+  background: rgba(180, 83, 9, 0.1);
+  color: #b45309;
 }
 
 /* 文章卡片头部布局 */
@@ -665,33 +665,33 @@ body {
   overflow: hidden;
 }
 
-/* 深色模式适配 */
+/* 深色模式适配 - 统一暖色系 */
 [data-theme="dark"] .post-card-bar.claude-code {
-  background: linear-gradient(90deg, #4f46e5, #7c3aed, #db2777);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #d97706);
 }
 
 [data-theme="dark"] .post-card-bar.case-study {
-  background: linear-gradient(90deg, #d97706, #dc2626);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
 }
 
 [data-theme="dark"] .post-card-bar.tob-saas {
-  background: linear-gradient(90deg, #059669, #0d9488);
+  background: linear-gradient(90deg, #fcd34d, #fbbf24, #f59e0b);
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(79, 70, 229, 0.2);
-  color: #a5b4fc;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fcd34d;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.case-study {
-  background: rgba(217, 119, 6, 0.2);
-  color: #fcd34d;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.tob-saas,
 [data-theme="dark"] .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(5, 150, 105, 0.2);
-  color: #6ee7b7;
+  background: rgba(251, 191, 36, 0.15);
+  color: #f59e0b;
 }
 
 [data-theme="dark"] .post-card-footer {
@@ -2210,15 +2210,15 @@ body {
 }
 
 .capability-card-purple .capability-bar {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(90deg, #92400e, #b45309);
 }
 
 .capability-card-green .capability-bar {
-  background: linear-gradient(90deg, #047857, #059669);
+  background: linear-gradient(90deg, #78350f, #92400e);
 }
 
 .capability-card-orange .capability-bar {
-  background: linear-gradient(90deg, #c2410c, #ea580c);
+  background: linear-gradient(90deg, #d97706, #f59e0b);
 }
 
 .capability-card:hover {
@@ -2254,18 +2254,18 @@ body {
 }
 
 .capability-card-purple .capability-icon {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(139, 92, 246, 0.08));
-  color: #7c3aed;
+  background: linear-gradient(135deg, rgba(146, 64, 14, 0.1), rgba(180, 83, 9, 0.08));
+  color: #92400e;
 }
 
 .capability-card-green .capability-icon {
-  background: linear-gradient(135deg, rgba(4, 120, 87, 0.1), rgba(5, 150, 105, 0.08));
-  color: #047857;
+  background: linear-gradient(135deg, rgba(120, 53, 15, 0.1), rgba(146, 64, 14, 0.08));
+  color: #78350f;
 }
 
 .capability-card-orange .capability-icon {
-  background: linear-gradient(135deg, rgba(194, 65, 12, 0.1), rgba(234, 88, 12, 0.08));
-  color: #c2410c;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.1), rgba(245, 158, 11, 0.08));
+  color: #d97706;
 }
 
 .capability-icon svg {
@@ -2308,18 +2308,18 @@ body {
 }
 
 [data-theme="dark"] .capability-card-purple .capability-icon {
-  background: rgba(167, 139, 250, 0.2);
-  color: #a78bfa;
+  background: rgba(251, 146, 60, 0.2);
+  color: #fb923c;
 }
 
 [data-theme="dark"] .capability-card-green .capability-icon {
-  background: rgba(52, 211, 153, 0.2);
-  color: #34d399;
+  background: rgba(252, 211, 77, 0.2);
+  color: #fcd34d;
 }
 
 [data-theme="dark"] .capability-card-orange .capability-icon {
-  background: rgba(251, 146, 60, 0.2);
-  color: #fb923c;
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
 }
 
 .capability-card h3 {
@@ -2373,11 +2373,11 @@ body {
 }
 
 .highlight-card-green .highlight-bar {
-  background: linear-gradient(90deg, #047857, #059669);
+  background: linear-gradient(90deg, #78350f, #92400e);
 }
 
 .highlight-card-purple .highlight-bar {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6);
+  background: linear-gradient(90deg, #92400e, #b45309);
 }
 
 .highlight-card:hover {
@@ -2406,11 +2406,11 @@ body {
 }
 
 .highlight-badge-green {
-  background: linear-gradient(135deg, #10b981, #059669);
+  background: linear-gradient(135deg, #92400e, #78350f);
 }
 
 .highlight-badge-purple {
-  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  background: linear-gradient(135deg, #b45309, #92400e);
 }
 
 .highlight-card h3 {
@@ -2585,7 +2585,7 @@ body {
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #b45309, #7c3aed, #047857);
+  background: linear-gradient(90deg, #b45309, #d97706, #f59e0b);
   border-radius: 16px 16px 0 0;
 }
 
@@ -2878,8 +2878,8 @@ body {
 
 /* 图标颜色主题 - 暖色系统一 */
 .feature-icon.feature-icon-purple {
-  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(139, 92, 246, 0.08));
-  color: #8b5cf6;
+  background: linear-gradient(135deg, rgba(146, 64, 14, 0.12), rgba(180, 83, 9, 0.08));
+  color: #92400e;
 }
 
 .feature-icon.feature-icon-yellow {
@@ -3043,8 +3043,8 @@ body {
 }
 
 [data-theme="dark"] .feature-icon.feature-icon-purple {
-  background: rgba(167, 139, 250, 0.15);
-  color: #a78bfa;
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
 }
 
 [data-theme="dark"] .feature-icon.feature-icon-yellow {
@@ -3073,31 +3073,31 @@ body {
 }
 
 [data-theme="dark"] .post-card-bar.claude-code {
-  background: linear-gradient(90deg, #7c3aed, #8b5cf6, #a78bfa);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b, #d97706);
 }
 
 [data-theme="dark"] .post-card-bar.case-study {
-  background: linear-gradient(90deg, #b45309, #d97706, #f59e0b);
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
 }
 
 [data-theme="dark"] .post-card-bar.tob-saas {
-  background: linear-gradient(90deg, #047857, #059669, #10b981);
+  background: linear-gradient(90deg, #fcd34d, #fbbf24, #f59e0b);
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.claude-code {
-  background: rgba(167, 139, 250, 0.15);
-  color: #c4b5fd;
+  background: rgba(251, 191, 36, 0.2);
+  color: #fcd34d;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.case-study {
   background: rgba(251, 191, 36, 0.15);
-  color: #fcd34d;
+  color: #fbbf24;
 }
 
 [data-theme="dark"] .post-card-tags-rich .tag-colored.tob-saas,
 [data-theme="dark"] .post-card-tags-rich .tag-colored.pitfall {
-  background: rgba(52, 211, 153, 0.15);
-  color: #6ee7b7;
+  background: rgba(251, 191, 36, 0.15);
+  color: #f59e0b;
 }
 
 [data-theme="dark"] .post-card-footer {
@@ -3129,18 +3129,18 @@ body {
 }
 
 [data-theme="dark"] .capability-card-purple .capability-icon {
-  background: rgba(167, 139, 250, 0.15);
-  color: #a78bfa;
+  background: rgba(251, 146, 60, 0.15);
+  color: #fb923c;
 }
 
 [data-theme="dark"] .capability-card-green .capability-icon {
-  background: rgba(52, 211, 153, 0.15);
-  color: #34d399;
+  background: rgba(252, 211, 77, 0.15);
+  color: #fcd34d;
 }
 
 [data-theme="dark"] .capability-card-orange .capability-icon {
-  background: rgba(251, 146, 60, 0.15);
-  color: #fb923c;
+  background: rgba(245, 158, 11, 0.15);
+  color: #f59e0b;
 }
 
 /* 项目亮点深色模式 */
@@ -3403,13 +3403,13 @@ body {
 }
 
 .tech-item.backend {
-  background: rgba(16, 185, 129, 0.3);
-  border: 1px solid #10b981;
+  background: rgba(180, 83, 9, 0.3);
+  border: 1px solid #d97706;
 }
 
 .tech-item.frontend {
-  background: rgba(139, 92, 246, 0.3);
-  border: 1px solid #8b5cf6;
+  background: rgba(146, 64, 14, 0.3);
+  border: 1px solid #b45309;
 }
 
 .tech-item.other {

@@ -74,36 +74,36 @@ title: 首页
             <text x="120" y="104" text-anchor="middle" fill="white" font-size="11" font-weight="500">RAG</text>
 
             <!-- LLM -->
-            <circle cx="380" cy="100" r="28" fill="#7c3aed" opacity="0.85"/>
+            <circle cx="380" cy="100" r="28" fill="#92400e" opacity="0.85"/>
             <text x="380" y="104" text-anchor="middle" fill="white" font-size="11" font-weight="500">LLM</text>
 
             <!-- SaaS -->
-            <circle cx="100" cy="250" r="28" fill="#0891b2" opacity="0.85"/>
+            <circle cx="100" cy="250" r="28" fill="#78350f" opacity="0.85"/>
             <text x="100" y="254" text-anchor="middle" fill="white" font-size="11" font-weight="500">SaaS</text>
 
             <!-- IoT -->
-            <circle cx="400" cy="250" r="28" fill="#059669" opacity="0.85"/>
+            <circle cx="400" cy="250" r="28" fill="#d97706" opacity="0.85"/>
             <text x="400" y="254" text-anchor="middle" fill="white" font-size="11" font-weight="500">IoT</text>
 
             <!-- 数据 -->
-            <circle cx="180" cy="320" r="28" fill="#dc2626" opacity="0.85"/>
+            <circle cx="180" cy="320" r="28" fill="#b45309" opacity="0.85"/>
             <text x="180" y="324" text-anchor="middle" fill="white" font-size="11" font-weight="500">Data</text>
 
             <!-- API -->
-            <circle cx="320" cy="320" r="28" fill="#ca8a04" opacity="0.85"/>
+            <circle cx="320" cy="320" r="28" fill="#f59e0b" opacity="0.85"/>
             <text x="320" y="324" text-anchor="middle" fill="white" font-size="11" font-weight="500">API</text>
 
             <!-- 数据流动画点 -->
             <circle r="4" fill="#fbbf24">
               <animateMotion dur="3s" repeatCount="indefinite" path="M250,200 L120,100"/>
             </circle>
-            <circle r="4" fill="#a78bfa">
+            <circle r="4" fill="#fb923c">
               <animateMotion dur="3.5s" repeatCount="indefinite" path="M250,200 L380,100"/>
             </circle>
-            <circle r="4" fill="#22d3ee">
+            <circle r="4" fill="#fcd34d">
               <animateMotion dur="4s" repeatCount="indefinite" path="M250,200 L100,250"/>
             </circle>
-            <circle r="4" fill="#34d399">
+            <circle r="4" fill="#f59e0b">
               <animateMotion dur="3.2s" repeatCount="indefinite" path="M250,200 L400,250"/>
             </circle>
           </svg>
