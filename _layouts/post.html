@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<article class="post-article">
+<article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <!-- 阅读进度条 -->
+  <div class="reading-progress" id="reading-progress">
+    <div class="reading-progress-bar" id="progress-bar"></div>
+  </div>
+
   <div class="container">
     <!-- 文章头部 - Hero 风格 -->
     <header class="article-header">
@@ -16,23 +21,30 @@ layout: default
         {% endif %}
 
         <!-- 标题 -->
-        <h1 class="article-title">{{ page.title }}</h1>
+        <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
 
-        <!-- 元信息 -->
-        <div class="article-meta">
-          <div class="meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
-          </div>
-          {% if page.author %}
-          <div class="meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span>{{ page.author }}</span>
-          </div>
-          {% endif %}
-          <div class="meta-item">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            <span>{{ content | number_of_words | divided_by: 180 }} 分钟阅读</span>
+        <!-- 摘要 -->
+        {% if page.excerpt %}
+        <p class="article-excerpt" itemprop="description">{{ page.excerpt | strip_html | truncate: 160 }}</p>
+        {% endif %}
+
+        <!-- 元信息卡片 -->
+        <div class="article-meta-card">
+          <div class="author-info-row">
+            <div class="author-avatar" aria-label="作者头像">Z</div>
+            <div class="author-details">
+              <span class="author-name" itemprop="author">码孖</span>
+              <div class="meta-badges">
+                <time class="meta-badge" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  {{ page.date | date: "%Y-%m-%d" }}
+                </time>
+                <span class="meta-badge">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                  {{ content | number_of_words | divided_by: 180 }} 分钟阅读
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -41,24 +53,33 @@ layout: default
     <!-- 文章主体 -->
     <div class="article-body">
       <!-- 主内容区 -->
-      <main class="article-content" id="article-content">
+      <main class="article-content" id="article-content" itemprop="articleBody">
         {{ content }}
       </main>
 
       <!-- 侧边栏 -->
       <aside class="article-sidebar">
-        <!-- 目录 -->
+        <!-- 目录导航 -->
         <nav class="toc" id="toc">
-          <h4 class="toc-title">目录</h4>
-          <ul class="toc-list"></ul>
+          <div class="toc-header">
+            <h4 class="toc-title">目录</h4>
+            <button class="toc-toggle" id="toc-toggle" aria-label="切换目录">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+          </div>
+          <ul class="toc-list" id="toc-list"></ul>
         </nav>
 
         <!-- 作者卡片 -->
-        <div class="author-card-mini">
-          <div class="author-avatar">Z</div>
-          <div class="author-info">
-            <div class="author-name">码孖</div>
-            <div class="author-bio">15年+ 技术负责人<br>AI 工程化实践者</div>
+        <div class="author-card-sidebar">
+          <div class="author-avatar-large">Z</div>
+          <div class="author-info-full">
+            <div class="author-name-large">码孖</div>
+            <div class="author-title">15年+ 技术负责人</div>
+            <p class="author-bio-full">专注 AI 工程化、大模型应用、企业级系统架构。记录实战经验、架构设计与真实踩坑。</p>
+            <div class="author-links">
+              <a href="{{ '/about' | relative_url }}" class="author-link">了解更多 →</a>
+            </div>
           </div>
         </div>
       </aside>
@@ -68,6 +89,20 @@ layout: default
     <footer class="article-footer">
       <!-- 分隔线 -->
       <div class="footer-divider"></div>
+
+      <!-- 文章信息 -->
+      <div class="article-footer-info">
+        <div class="footer-tags">
+          {% if page.tags.size > 0 %}
+          <span class="footer-label">相关标签：</span>
+          <div class="footer-tag-list">
+            {% for tag in page.tags %}
+            <span class="footer-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
 
       <!-- 导航 -->
       <nav class="article-nav">
@@ -79,6 +114,10 @@ layout: default
           </div>
           <div class="nav-title">{{ page.previous.title }}</div>
         </a>
+        {% else %}
+        <div class="nav-card nav-prev nav-disabled">
+          <div class="nav-label">已是最新</div>
+        </div>
         {% endif %}
         {% if page.next.url %}
         <a class="nav-card nav-next" href="{{ page.next.url | relative_url }}">
@@ -88,37 +127,152 @@ layout: default
           </div>
           <div class="nav-title">{{ page.next.title }}</div>
         </a>
+        {% else %}
+        <div class="nav-card nav-next nav-disabled">
+          <div class="nav-label">已到底部</div>
+        </div>
         {% endif %}
       </nav>
     </footer>
   </div>
+
+  <!-- 返回顶部按钮 -->
+  <button class="back-to-top" id="back-to-top" aria-label="返回顶部">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- 移动端目录浮窗 -->
+  <button class="mobile-toc-trigger" id="mobile-toc-trigger" aria-label="目录">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+  </button>
+
+  <!-- 移动端目录面板 -->
+  <div class="mobile-toc-panel" id="mobile-toc-panel">
+    <div class="mobile-toc-header">
+      <h4>目录</h4>
+      <button class="mobile-toc-close" id="mobile-toc-close" aria-label="关闭">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="mobile-toc-list" id="mobile-toc-list"></ul>
+  </div>
 </article>
 
-<!-- 目录生成脚本 -->
+<!-- 目录生成与交互脚本 -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const content = document.getElementById('article-content');
-  const tocList = document.querySelector('.toc-list');
+  const tocList = document.getElementById('toc-list');
+  const mobileTocList = document.getElementById('mobile-toc-list');
   const headings = content.querySelectorAll('h2, h3');
+  const progressBar = document.getElementById('progress-bar');
+  const backToTop = document.getElementById('back-to-top');
+  const mobileTocTrigger = document.getElementById('mobile-toc-trigger');
+  const mobileTocPanel = document.getElementById('mobile-toc-panel');
+  const mobileTocClose = document.getElementById('mobile-toc-close');
 
+  // 生成目录
   if (headings.length === 0) {
-    document.querySelector('.toc').style.display = 'none';
-    return;
+    document.getElementById('toc').style.display = 'none';
+    mobileTocTrigger.style.display = 'none';
+  } else {
+    headings.forEach((heading, index) => {
+      const id = 'heading-' + index;
+      heading.id = id;
+
+      const isH3 = heading.tagName === 'H3';
+
+      // 桌面端目录
+      const li = document.createElement('li');
+      li.className = isH3 ? 'toc-subitem' : 'toc-item';
+      const a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = heading.textContent;
+      a.setAttribute('data-target', id);
+      li.appendChild(a);
+      tocList.appendChild(li);
+
+      // 移动端目录
+      const mobileLi = li.cloneNode(true);
+      mobileTocList.appendChild(mobileLi);
+    });
   }
 
-  headings.forEach((heading, index) => {
-    const id = 'heading-' + index;
-    heading.id = id;
+  // 阅读进度条
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    progressBar.style.width = progress + '%';
+  }
 
-    const li = document.createElement('li');
-    li.className = heading.tagName === 'H3' ? 'toc-subitem' : 'toc-item';
+  // 目录高亮当前章节
+  function highlightCurrentSection() {
+    const scrollPos = window.scrollY + 100;
+    let currentId = null;
 
-    const a = document.createElement('a');
-    a.href = '#' + id;
-    a.textContent = heading.textContent;
+    headings.forEach(heading => {
+      if (heading.offsetTop <= scrollPos) {
+        currentId = heading.id;
+      }
+    });
 
-    li.appendChild(a);
-    tocList.appendChild(li);
+    document.querySelectorAll('.toc-item a, .toc-subitem a, .mobile-toc-list a').forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('data-target') === currentId) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // 返回顶部按钮显示/隐藏
+  function toggleBackToTop() {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  // 滚动事件监听
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateProgress();
+        highlightCurrentSection();
+        toggleBackToTop();
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
+
+  // 返回顶部点击
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 移动端目录面板
+  mobileTocTrigger.addEventListener('click', function() {
+    mobileTocPanel.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+
+  mobileTocClose.addEventListener('click', function() {
+    mobileTocPanel.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+
+  // 点击目录项后关闭移动端面板
+  mobileTocList.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      mobileTocPanel.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+
+  // 初始化
+  updateProgress();
 });
 </script>
